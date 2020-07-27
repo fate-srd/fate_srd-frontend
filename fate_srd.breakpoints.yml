@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+fate_srd.small:
+  label: small
+  mediaQuery: 'all and (min-width: 25em)'
+fate_srd.small-med:
+  label: small-med
+  mediaQuery: 'all and (min-width: 26em)'
+fate_srd.small-large:
+  label: small-large
+  mediaQuery: 'all and (min-width: 41em)'
+fate_srd.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em)'
+fate_srd.large:
+  label: large
+  mediaQuery: 'all and (min-width: 61.25em)'
