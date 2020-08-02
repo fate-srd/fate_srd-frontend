@@ -7,5 +7,6 @@ export default create({
   // Branding
   brandTitle: 'Fate SRD',
   brandUrl: 'https://fate-srd.com',
-  brandImage: 'LOGO_PATH',
+  brandImage:
+    'https://raw.githubusercontent.com/amazingrando/fate_srd/master/images/logo.png',
 });
