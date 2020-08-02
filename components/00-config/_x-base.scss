@@ -3,7 +3,9 @@ html {
 }
 
 body {
-  background-color: var(--color-gray-light);
+  --background-color: var(--color-gray-light);
+
+  background-color: var(--background-color);
 }
 
 *,

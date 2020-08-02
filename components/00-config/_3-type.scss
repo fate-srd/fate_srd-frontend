@@ -24,3 +24,8 @@ p {
     margin: var(--s2) 0 var(--s);
   }
 }
+
+ul,
+ol {
+  margin: 0 0 var(--s);
+}

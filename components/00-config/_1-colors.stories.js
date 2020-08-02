@@ -7,7 +7,7 @@ import colorsData from './_1-colors.yml';
 /**
  * Storybook Definition.
  */
-export default { title: 'Base/Colors' };
+export default { title: 'Tokens/Colors' };
 
 export const Palettes = () => (
   <div dangerouslySetInnerHTML={{ __html: colors(colorsData) }} />
