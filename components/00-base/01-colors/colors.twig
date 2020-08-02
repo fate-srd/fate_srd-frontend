@@ -19,7 +19,7 @@
           {% set colors_title_modifiers = ['reverse'] %}
         {% endif %}
         <li {{ bem("item", [palette_machine ~ '-' ~ color_machine], colors_base_class) }}>
-          <span {{ bem("title", colors_title_modifiers, colors_base_class) }}>{{ color.name }}</span> <br/>
+          <span {{ bem("title", colors_title_modifiers, colors_base_class) }}>{{ color.name }}</span>
         </li>
       {% endfor %}
     </ul>

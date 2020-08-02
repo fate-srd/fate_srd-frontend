@@ -1,7 +1,17 @@
 // Color Usage variables - use these (via the `clr` function below)
 // rather than color variables directly.
-$defaultColors: (
-  text: $gray,
+
+$fateColors: (color-white: $color-white,
+  color-blue: $color-blue,
+  color-blue-dark: $color-blue-dark,
+  color-blue-light: $color-blue-light,
+  color-gray-dark: $color-gray-dark,
+  color-gray-light: $color-gray-light,
+  color-yellow: $color-yellow,
+  color-yellow-light : $color-yellow-light,
+);
+
+$defaultColors: (text: $gray,
   text-inverse: $white,
   background: $white,
   background-section: $gray-lightest,
@@ -17,8 +27,7 @@ $defaultColors: (
   message: $green-light,
 );
 
-$darkColors: (
-  text: $white,
+$darkColors: (text: $white,
   text-inverse: $gray,
   background: $gray,
   background-inverse: $gray-light,
@@ -66,14 +75,24 @@ $darkColors: (
 // both maps, the one from `$darkColors` will be used on machines that have
 // opted to use the 'dark mode' on their OS.
 :root {
+
+  // Create custom properties for Fate colors
+  @each $name,
+  $color in $fateColors {
+    --c-#{$name}: #{$color};
+  }
+
   // Create custom properties for default colors
-  @each $name, $color in $defaultColors {
+  @each $name,
+  $color in $defaultColors {
     --c-#{$name}: #{$color};
   }
 
   // Create custom properties for dark colors, an duse them if the user's OS has dark mode enabled
   @media (prefers-color-scheme: dark) {
-    @each $name, $color in $darkColors {
+
+    @each $name,
+    $color in $darkColors {
       --c-#{$name}: #{$color};
     }
   }
@@ -82,7 +101,9 @@ $darkColors: (
   // component library regardless of OS setting.
   // This is required to show the correct colors in the component library at all times
   [data-theme='default'] {
-    @each $name, $color in $defaultColors {
+
+    @each $name,
+    $color in $defaultColors {
       --c-#{$name}: #{$color};
     }
   }
@@ -91,7 +112,9 @@ $darkColors: (
   // library regardless of OS setting.
   // This is required to show the correct colors in the component library at all times
   [data-theme='dark'] {
-    @each $name, $color in $darkColors {
+
+    @each $name,
+    $color in $darkColors {
       --c-#{$name}: #{$color};
     }
   }

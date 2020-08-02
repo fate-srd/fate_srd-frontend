@@ -4,39 +4,56 @@
 }
 
 .cl-colors__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 0 2rem;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
 }
 
 .cl-colors__item {
+  border: 6px solid #fff;
+  border-radius: 4px;
+  min-height: 200px;
   list-style: none;
-  padding: 1rem 2rem;
-  transition: all 0.4s;
-  flex: 1 1 20%;
-  min-width: 150px;
-  min-height: 150px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
+.cl-colors__title {
+  display: block;
+  background: #FFF;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
 // Dynamically set swatch text color based on the lightness of the background color
-@function set-color(
-  $color,
+@function set-color($color,
   $text-primary: accent-high,
-  $text-secondary: muted
-) {
+  $text-secondary: muted) {
   @if (lightness($color) > 50) {
     @return clr($text-primary);
-  } @else {
+  }
+
+  @else {
     @return clr($text-secondary);
   }
 }
 
+// Style Fate color swatches
+@each $name,
+$color in $fateColors {
+  .cl-colors__item--fate {
+    &-#{$name} {
+      background-color: clr($name);
+      color: set-color($color);
+    }
+  }
+}
+
 // Style default color swatches
-@each $name, $color in $defaultColors {
+@each $name,
+$color in $defaultColors {
   .cl-colors__item--default {
     &-#{$name} {
       background-color: clr($name);
@@ -46,7 +63,8 @@
 }
 
 // Style dark color swatches
-@each $name, $color in $darkColors {
+@each $name,
+$color in $darkColors {
   .cl-colors__item--dark {
     &-#{$name} {
       background-color: clr($name);
