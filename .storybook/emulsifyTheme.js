@@ -5,8 +5,7 @@ import { create } from '@storybook/theming';
 export default create({
   base: 'light',
   // Branding
-  brandTitle: 'Emulsify',
-  brandUrl: 'https://emulsify.info',
-  brandImage:
-    'https://raw.githubusercontent.com/emulsify-ds/emulsify-design-system/master/images/logo.png',
+  brandTitle: 'Fate SRD',
+  brandUrl: 'https://fate-srd.com',
+  brandImage: 'LOGO_PATH',
 });
