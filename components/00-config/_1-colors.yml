@@ -1,0 +1,12 @@
+colors_heading: 'Palette'
+palettes:
+  - palette_heading: 'Fate Colors'
+    colors:
+      - name: 'color-white'
+      - name: 'color-blue'
+      - name: 'color-blue-dark'
+      - name: 'color-blue-light'
+      - name: 'color-gray-dark'
+      - name: 'color-gray-light'
+      - name: 'color-yellow'
+      - name: 'color-yellow-light'
