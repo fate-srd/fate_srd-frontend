@@ -83,6 +83,7 @@
     "coverage": "yarn test && open-cli .coverage/lcov-report/index.html"
   },
   "devDependencies": {
+    "@storybook/addon-viewport": "^5.3.19",
     "babel-jest": "^26.0.1",
     "chalk": "^4.0.0",
     "core-js": "3.6.5",
