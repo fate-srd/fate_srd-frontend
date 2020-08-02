@@ -12,6 +12,7 @@ module.exports = async ({ config }) => {
         options: {
           twigOptions: {
             namespaces: {
+              tokens: path.resolve(__dirname, '../', 'components/00-tokens'),
               components: path.resolve(
                 __dirname,
                 '../',

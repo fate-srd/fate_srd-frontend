@@ -3,9 +3,11 @@ palettes:
   - palette_heading: 'Fate Colors'
     colors:
       - name: 'color-white'
+      - name: 'color-blue-light'
       - name: 'color-blue'
       - name: 'color-blue-dark'
-      - name: 'color-blue-light'
+      - name: 'color-blue-darker'
+      - name: 'color-blue-darkest'
       - name: 'color-gray-dark'
       - name: 'color-gray-light'
       - name: 'color-yellow'
