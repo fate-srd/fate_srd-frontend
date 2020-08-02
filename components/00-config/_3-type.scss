@@ -1,3 +1,26 @@
+:root {
+  --font-color: var(--color-dark);
+  --font-size: 1.125rem;
+  --line-height: 1.4;
+  --header-color: var(--color-blue-dark);
+  --header-line-height: 1;
+}
+
 body {
+  color: var(--font-color);
   font-family: var(--font-base);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+p {
+  margin: 0 0 var(--s);
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: var(--header-color);
+    line-height: var(--header-line-height);
+    margin: var(--s2) 0 var(--s);
+  }
 }

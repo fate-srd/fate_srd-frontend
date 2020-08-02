@@ -15,7 +15,8 @@
         "content",
         "import",
         "function",
-        "return"
+        "return",
+        "for"
       ]
     }],
     "no-descending-specificity": null,

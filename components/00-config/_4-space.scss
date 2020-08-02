@@ -1,0 +1,5 @@
+:root {
+  --s: 1rem;
+  --s1: var(--s);
+  --s2: calc(var(--s) * 2);
+}
