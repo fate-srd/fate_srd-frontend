@@ -1,0 +1,107 @@
+.site-footer {
+  background: var(--color-gray-dark);
+  color: var(--color-white);
+  padding: var(--s3) var(--s) var(--s5);
+  position: relative;
+
+  &__logo-wrapper {
+    margin-bottom: var(--s2);
+    width: 275px;
+    height: 50px;
+    position: relative;
+    grid-area: logo;
+    align-self: center;
+
+    @include footerLarge {
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: -69px;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: var(--max-width);
+
+    @include footerLarge {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: var(--s3);
+      grid-template-areas:
+        "logo patreon text text"
+        "nav nav text text";
+    }
+  }
+
+  &__patreon {
+    display: block;
+    margin-bottom: var(--s2);
+    position: relative;
+    z-index: 100;
+    grid-area: patreon;
+    align-self: center;
+
+    @include footerLarge {
+      margin: 0;
+    }
+  }
+
+  &__patreon-img {
+    display: block;
+    max-width: 177px;
+  }
+
+  &__nav {
+    margin-bottom: var(--s2);
+    position: relative;
+    z-index: 100;
+    grid-area: nav;
+  }
+
+  &__ul {
+    margin: 0;
+    padding: 0;
+    // column-count: 2;
+    // column-gap: var(--s2);
+    // column-width: min-content;
+  }
+
+  &__li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    color: var(--color-white);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.15s;
+    padding: var(--s05) var(--s05) var(--s05) 0;
+
+    &:hover {
+      color: var(--color-yellow-light);
+    }
+  }
+
+  &__legal {
+    font-size: 0.8125rem;
+    grid-area: text;
+
+    a {
+      color: var(--color-yellow-light);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    p {
+      margin-bottom: var(--s05);
+    }
+  }
+
+}

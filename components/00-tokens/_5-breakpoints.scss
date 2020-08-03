@@ -1,0 +1,7 @@
+$break--footer-l: 1000px;
+
+@mixin footerLarge {
+  @include breakpoint($break--footer-l) {
+    @content;
+  }
+}
