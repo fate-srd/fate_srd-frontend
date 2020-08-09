@@ -18,6 +18,7 @@ module.exports = async ({ config }) => {
                 '../',
                 'components/01-components',
               ),
+              pages: path.resolve(__dirname, '../', 'components/02-pages'),
             },
           },
         },

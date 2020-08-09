@@ -1,5 +1,11 @@
 $break--footer-l: 1000px;
 
+@mixin navLarge {
+  @include breakpoint($break--footer-l) {
+    @content;
+  }
+}
+
 @mixin footerLarge {
   @include breakpoint($break--footer-l) {
     @content;

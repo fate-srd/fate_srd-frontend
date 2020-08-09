@@ -1,0 +1,27 @@
+.site-main {
+  min-height: 400;
+
+  &__content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "aside main";
+    gap: var(--s2);
+    padding: var(--s2) 0 var(--s5);
+  }
+}
+
+.main-content-wrapper {
+  grid-area: main;
+}
+
+.aside-wrapper {
+  grid-area: aside;
+  background: var(--color-yellow);
+  border-radius: var(--border-radius);
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.21), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.150959), 0 22.3363px 17.869px rgba(0, 0, 0, 0.125183), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.105), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.0848175), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.0590406);
+  padding: var(--s2);
+}

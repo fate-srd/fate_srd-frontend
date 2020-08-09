@@ -1,3 +1,28 @@
+@mixin navLink {
+  color: var(--color-white);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: var(--s05) var(--s);
+  text-decoration: none;
+  transition: all .25s;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: fit-content;
+
+  @include navLarge {
+    flex-flow: row nowrap;
+    font-size: 1.375rem;
+    padding: var(--s05) var(--s);
+  }
+
+  &:hover {
+    background: var(--color-blue-darkestest);
+  }
+}
+
 .site-header {
   background: var(--color-blue-dark);
 
@@ -16,9 +41,8 @@
   &__logo {
     position: absolute;
     top: var(--s);
-    left: -45px;
+    left: -68px;
   }
-
 
   &__nav {
     background: var(--color-blue-darker);
@@ -34,75 +58,49 @@
 
   &__ul {
     margin: 0;
-    padding: 0;
+    padding: var(--s025) 0;
     display: flex;
-    align-items: center;
+    align-items: stretch;
   }
 
   &__li {
-    margin: 0;
+    margin: 0 var(--s025);
     padding: 0;
     list-style: none;
+    display: flex;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   &__link {
-    display: inline-block;
-    color: var(--color-white);
-    font-size: 1.375rem;
-    font-weight: bold;
-    padding: var(--s05) var(--s);
-    text-decoration: none;
-    transition: all .25s;
-
-    &:hover {
-      background: var(--color-blue-darkestest);
-      border-radius: 6px;
-    }
+    @include navLink;
 
     i {
       opacity: 0.4;
+      font-size: 2rem;
+      margin-bottom: var(--s025);
+
+      @include navLarge {
+        margin: 0 var(--s05) 0 0;
+      }
     }
   }
 
   &__search {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    color: var(--color-white);
-    font-size: 1.375rem;
-    font-weight: bold;
-    padding: var(--s);
-    text-decoration: none;
-    transition: all .15s;
+    @include navLink;
 
-    &:hover {
-      background: var(--color-blue-darkest);
-    }
+    margin: var(--s025) 0 var(--s025) auto;
 
-    .icon {
-      margin-left: var(--s05);
-      width: 22px;
-      height: 20px;
+    i {
+      opacity: 0.4;
+      font-size: 2rem;
+      margin-bottom: var(--s025);
+
+      @include navLarge {
+        margin: 0 var(--s05) 0 0;
+      }
     }
   }
 }
-
-
-// <header class="site-header">
-//   <div class="site-header__content">
-//     <div class="site-header__branding">
-//     <img src={{logo}} alt="">
-//     </div>
-//     <div class="site-header__nav">
-//       <nav class="nav-primary">
-//         <ul>
-//           <li><a href="#">Rules</a></li>
-//           <li><a href="#">Games &amp; Products</a></li>
-//           <li><a href="#">Podcasts &amp; Videos</a></li>
-//           <li><a href="#">Community</a></li>
-//           <li><a href="#">Downloads</a></li>
-//         </ul>
-//       </nav>
-//     </div>
-//   </div>
-// </header>
