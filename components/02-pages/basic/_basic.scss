@@ -1,16 +1,22 @@
 .site-main {
-  min-height: 400;
-
   &__content {
     max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "aside main";
-    gap: var(--s2);
-    padding: var(--s2) 0 var(--s5);
+      "main"
+      "aside";
+    gap: var(--s1);
+    padding: var(--s2) var(--s) var(--s5);
+
+    @include large {
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas:
+        "aside main";
+      gap: var(--s2);
+    }
   }
 }
 
