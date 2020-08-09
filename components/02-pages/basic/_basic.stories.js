@@ -3,6 +3,10 @@ import React from 'react';
 import template from './_basic.twig';
 import logo from '../../../images/logo-with-shadow.svg';
 import patreon from '../../../images/become_a_patron_button@2x.png';
+import cover from '../../../images/cover--fae.png';
+import buyEh from '../../../images/buy--eh.png';
+import buyDtr from '../../../images/buy--dtr.png';
+import buyItch from '../../../images/buy--itch.png';
 
 /**
  * Storybook Definition.
@@ -10,5 +14,9 @@ import patreon from '../../../images/become_a_patron_button@2x.png';
 export default { title: 'Page/Basic' };
 
 export const BasicPage = () => (
-  <div dangerouslySetInnerHTML={{ __html: template({ logo, patreon }) }} />
+  <div
+    dangerouslySetInnerHTML={{
+      __html: template({ logo, patreon, cover, buyEh, buyDtr, buyItch }),
+    }}
+  />
 );
