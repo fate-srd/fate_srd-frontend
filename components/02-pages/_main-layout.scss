@@ -7,7 +7,11 @@
     0 12.5216px 10.0172px rgba(0, 0, 0, 0.105),
     0 6.6501px 5.32008px rgba(0, 0, 0, 0.0848175),
     0 2.76726px 2.21381px rgba(0, 0, 0, 0.0590406);
-  padding: var(--s3);
+  padding: var(--s2) calc(var(--s) * 1.5);
+
+  @include medium {
+    padding: var(--s3) var(--s2);
+  }
 }
 
 .rules-section {
@@ -37,7 +41,6 @@
 }
 
 .site-main__content {
-
   a,
   a:link {
     color: var(--color-blue);

@@ -6,7 +6,7 @@
   line-height: 1;
   padding: var(--s05) var(--s);
   text-decoration: none;
-  transition: all .25s;
+  transition: all 0.25s;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -35,13 +35,31 @@
   &__branding {
     padding: var(--s) 0;
     position: relative;
-    min-height: calc(50px + (var(--s) * 2.5));
+    min-height: 56px;
+
+    @include medium {
+      min-height: 80px;
+    }
+    @include large {
+      min-height: calc(50px + (var(--s) * 2.5));
+    }
   }
 
   &__logo {
     position: absolute;
     top: var(--s);
-    left: -53px;
+    left: -18px;
+    width: 50%;
+
+    @include medium {
+      left: -38px;
+      width: 50%;
+    }
+
+    @include large {
+      left: -53px;
+      width: auto;
+    }
   }
 
   &__nav {
@@ -52,9 +70,13 @@
 }
 
 .nav-primary {
+  display: none;
   color: var(--color-white);
-  display: flex;
-  flex-flow: row nowrap;
+
+  @include medium {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 
   &__ul {
     margin: 0;

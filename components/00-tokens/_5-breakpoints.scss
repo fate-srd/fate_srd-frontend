@@ -1,4 +1,11 @@
+$break--footer-m: 600px;
 $break--footer-l: 1000px;
+
+@mixin medium {
+  @include breakpoint($break--footer-m) {
+    @content;
+  }
+}
 
 @mixin large {
   @include breakpoint($break--footer-l) {

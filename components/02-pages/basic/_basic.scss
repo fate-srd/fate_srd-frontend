@@ -6,16 +6,19 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "main"
-      "aside";
-    gap: var(--s1);
-    padding: var(--s2) var(--s) var(--s5);
+      'main'
+      'aside';
+    gap: var(--s);
+    padding: var(--s05);
+
+    @include medium {
+      padding: var(--s);
+    }
 
     @include large {
       grid-template-columns: 1fr 2fr;
-      grid-template-areas:
-        "aside main";
-      gap: var(--s2);
+      grid-template-areas: 'aside main';
+      gap: var(--s);
     }
   }
 }
@@ -28,6 +31,15 @@
   grid-area: aside;
   background: var(--color-yellow);
   border-radius: var(--border-radius);
-  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.21), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.150959), 0 22.3363px 17.869px rgba(0, 0, 0, 0.125183), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.105), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.0848175), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.0590406);
-  padding: var(--s3) var(--s2);
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.21),
+    0 41.7776px 33.4221px rgba(0, 0, 0, 0.150959),
+    0 22.3363px 17.869px rgba(0, 0, 0, 0.125183),
+    0 12.5216px 10.0172px rgba(0, 0, 0, 0.105),
+    0 6.6501px 5.32008px rgba(0, 0, 0, 0.0848175),
+    0 2.76726px 2.21381px rgba(0, 0, 0, 0.0590406);
+  padding: var(--s2) calc(var(--s) * 1.5);
+
+  @include medium {
+    padding: var(--s3) var(--s2);
+  }
 }
