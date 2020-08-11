@@ -1,7 +1,6 @@
 .site-footer {
   background: var(--color-gray-dark);
   color: var(--color-white);
-  padding: var(--s3) var(--s) var(--s5);
   position: relative;
 
   &__logo-wrapper {
@@ -24,8 +23,9 @@
   }
 
   &__content {
-    margin: 0 auto;
-    max-width: var(--max-width);
+    @include max-width;
+
+    padding: var(--s3) 0 var(--s5);
 
     @include footerLarge {
       display: grid;
@@ -34,7 +34,7 @@
       grid-template-areas:
         "logo patreon text text"
         "nav nav text text";
-      padding: 0 var(--s);
+      padding: var(--s3) var(--s) var(--s5);
     }
   }
 

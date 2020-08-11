@@ -28,8 +28,7 @@
 
   &__branding,
   &__nav .nav-primary {
-    margin: 0 auto;
-    max-width: var(--max-width);
+    @include max-width;
   }
 
   &__branding {
@@ -40,6 +39,7 @@
     @include medium {
       min-height: 80px;
     }
+
     @include large {
       min-height: calc(50px + (var(--s) * 2.5));
     }
