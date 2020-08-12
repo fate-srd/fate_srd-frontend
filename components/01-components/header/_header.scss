@@ -34,32 +34,25 @@
   &__branding {
     padding: var(--s) 0;
     position: relative;
-    min-height: 56px;
-
-    @include medium {
-      min-height: 80px;
-    }
 
     @include large {
-      min-height: calc(50px + (var(--s) * 2.5));
+      padding: calc(var(--s) * 1.5) 0;
     }
   }
 
   &__logo {
-    position: absolute;
-    top: var(--s);
-    left: -18px;
-    width: 50%;
+    display: block;
+    filter: drop-shadow(0 100px 80px rgba(0, 0, 0, 0.19)) drop-shadow(0 41.7776px 33.4221px rgba(0, 0, 0, 0.151555)) drop-shadow(0 22.3363px 17.869px rgba(0, 0, 0, 0.148255)) drop-shadow(0 12.5216px 10.0172px rgba(0, 0, 0, 0.137738)) drop-shadow(0 6.6501px 5.32008px rgba(0, 0, 0, 0.112027)) drop-shadow(0 2.76726px 2.21381px rgba(0, 0, 0, 0.0671237));
+    width: 150px;
 
     @include medium {
-      left: -38px;
-      width: 50%;
+      width: 250px;
     }
 
-    @include large {
-      left: -53px;
-      width: auto;
-    }
+    // @include large {
+    //   left: -53px;
+    //   width: auto;
+    // }
   }
 
   &__nav {
