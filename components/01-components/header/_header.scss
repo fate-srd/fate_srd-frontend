@@ -116,7 +116,10 @@
 }
 
 .nav-flyout {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease;
+  transform: translateY(-10px);
   position: absolute;
   top: 75px;
   left: var(--s05);
@@ -155,8 +158,6 @@
       margin-bottom: 0;
       border-bottom: none;
     }
-
-
   }
 
   dt {
@@ -180,6 +181,7 @@
 
     &:hover {
       color: var(--color-blue-darker);
+      text-decoration: underline;
     }
   }
 }
@@ -187,7 +189,11 @@
 .has-nav-flyout {
   position: relative;
 
-  &:hover .nav-flyout {
-    display: block;
+  &:hover {
+    .nav-flyout {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
