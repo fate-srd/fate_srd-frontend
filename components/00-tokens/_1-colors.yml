@@ -9,6 +9,7 @@ palettes:
       - name: 'color-blue-darker'
       - name: 'color-blue-darkest'
       - name: 'color-gray-dark'
+      - name: 'color-gray-medium'
       - name: 'color-gray-light'
       - name: 'color-yellow'
       - name: 'color-yellow-light'

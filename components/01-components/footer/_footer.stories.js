@@ -1,7 +1,7 @@
 import React from 'react';
 
 import template from './_footer.twig';
-import logo from '../../../images/logo-with-shadow.svg';
+import logo from '../../../images/logo.svg';
 import patreon from '../../../images/become_a_patron_button@2x.png';
 
 /**

@@ -32,11 +32,11 @@
   }
 
   &__branding {
-    padding: var(--s) 0;
+    padding: var(--s);
     position: relative;
 
     @include large {
-      padding: calc(var(--s) * 1.5) 0;
+      padding: calc(var(--s) * 1.5) var(--s);
     }
   }
 
@@ -48,11 +48,6 @@
     @include medium {
       width: 250px;
     }
-
-    // @include large {
-    //   left: -53px;
-    //   width: auto;
-    // }
   }
 
   &__nav {
@@ -117,5 +112,82 @@
         margin: 0 var(--s05) 0 0;
       }
     }
+  }
+}
+
+.nav-flyout {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: var(--s05);
+  width: 636px;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.37), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.265976), 0 22.3363px 17.869px rgba(0, 0, 0, 0.22056), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.185), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.14944), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.104024);
+  padding: var(--s2);
+  column-count: 2;
+  column-gap: var(--s2);
+  column-rule: 1px solid var(--color-gray-medium);
+
+  @include large {
+    top: 60px;
+    left: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 36.5px;
+    height: 36.5px;
+    top: -3px;
+    left: 12px;
+    background: #FFF;
+    border-radius: 2px;
+    transform: matrix(0.71, 0.69, -0.73, 0.71, 0, 0);
+  }
+
+  &__region {
+    margin: 0 0 calc(var(--s) * 1.5);
+    padding-bottom: var(--s);
+    border-bottom: 1px solid var(--color-gray-medium);
+
+    &:nth-child(3n) {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+
+  }
+
+  dt {
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0;
+    display: block;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: var(--color-blue-dark);
+    text-decoration: none;
+    transition: all 0.15s;
+
+    &:hover {
+      color: var(--color-blue-darker);
+    }
+  }
+}
+
+.has-nav-flyout {
+  position: relative;
+
+  &:hover .nav-flyout {
+    display: block;
   }
 }
