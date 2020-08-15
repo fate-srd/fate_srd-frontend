@@ -17,15 +17,21 @@
   }
 
   &__logo {
-    position: absolute;
-    top: 0;
-    left: -69px;
+    display: block;
+    filter: drop-shadow(0 100px 80px rgba(0, 0, 0, 0.19)) drop-shadow(0 41.7776px 33.4221px rgba(0, 0, 0, 0.151555)) drop-shadow(0 22.3363px 17.869px rgba(0, 0, 0, 0.148255)) drop-shadow(0 12.5216px 10.0172px rgba(0, 0, 0, 0.137738)) drop-shadow(0 6.6501px 5.32008px rgba(0, 0, 0, 0.112027)) drop-shadow(0 2.76726px 2.21381px rgba(0, 0, 0, 0.0671237));
+    width: 250px;
+    position: relative;
+    left: -19px;
+
+    @include medium {
+      width: 250px;
+    }
   }
 
   &__content {
     @include max-width;
 
-    padding: var(--s3) 0 var(--s5);
+    padding: var(--s3) var(--s) var(--s5);
 
     @include footerLarge {
       display: grid;
@@ -34,7 +40,7 @@
       grid-template-areas:
         "logo patreon text text"
         "nav nav text text";
-      padding: var(--s3) var(--s) var(--s5);
+      // padding: var(--s3) var(--s) var(--s5);
     }
   }
 
