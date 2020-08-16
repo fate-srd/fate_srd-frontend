@@ -1,4 +1,4 @@
-const sampleText = `<h1>Didn't melt fairer keepsakes since Fellowship elsewhere.</h1>
+const sampleText = `<h1 class="page-title">Didn't melt fairer keepsakes since Fellowship elsewhere.</h1>
 <p>Woodlands payment Osgiliath tightening. Barad-dur follow belly comforts tender tough bell? Many that live deserve death. Some that die deserve life. Outwitted teatime grasp defeated before stones reflection corset seen animals Saruman's call?</p>
 <h2>Tad survive ensnare joy mistake courtesy Bagshot Row.</h2>
 <p>Ligulas step drops both? You shall not pass! Tender respectable success Valar impressive unfriendly bloom scraped? Branch hey-diddle-diddle pony trouble'll sleeping during jump Narsil.</p>
@@ -34,7 +34,7 @@ const sampleText = `<h1>Didn't melt fairer keepsakes since Fellowship elsewhere.
   <li>Diversion almost notion furs between fierce laboring Nazgûl ceaselessly parent.</li>
   <li>Agree ruling um wasteland Bagshot Row expect sleep.</li>
 </ol>
-<h3>Ere answering track forests shards roof!</h3>
+<h4>Ere answering track forests shards roof!</h4>
 <p>Delay freezes Gollum. Let the Ring-bearer decide. Bagshot Row chokes pole pauses immediately orders taught éored musing three-day? Disease rune repel source fire Goblinses already?</p>
 <table>
   <thead>

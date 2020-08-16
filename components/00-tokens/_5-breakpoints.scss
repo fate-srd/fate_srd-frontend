@@ -13,6 +13,12 @@ $break--footer-l: 1000px;
   }
 }
 
+@mixin beforeLarge {
+  @include breakpoint(max-width $break--footer-l - 1px) {
+    @content;
+  }
+}
+
 @mixin large {
   @include breakpoint($break--footer-l) {
     @content;

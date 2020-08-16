@@ -1,17 +1,16 @@
 .nav-in-page {
   background: var(--color-yellow);
-  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
   padding: var(--s05) var(--s);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   transition: all 0.5s;
-  max-width: 500px;
   margin: 0 auto;
 
-  @include beforeMedium {
+  @include beforeLarge {
     overflow: scroll;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     &__content,
     .fa-times {
@@ -24,6 +23,7 @@
       padding: var(--s);
       top: 0;
       border-radius: var(--border-radius);
+      z-index: 100;
 
       .fa-bars {
         display: none;
@@ -50,15 +50,16 @@
     }
   }
 
-  @include medium {
+  @include large {
     padding: var(--s3) var(--s2);
     border-radius: var(--border-radius);
-    box-shadow: 0 100px 80px rgba(0, 0, 0, 0.21),
-      0 41.7776px 33.4221px rgba(0, 0, 0, 0.150959),
-      0 22.3363px 17.869px rgba(0, 0, 0, 0.125183),
-      0 12.5216px 10.0172px rgba(0, 0, 0, 0.105),
-      0 6.6501px 5.32008px rgba(0, 0, 0, 0.0848175),
-      0 2.76726px 2.21381px rgba(0, 0, 0, 0.0590406);
+    box-shadow: var(--box-shadow);
+
+    .mobile-toggle {
+      i {
+        display: none;
+      }
+    }
   }
 
   &__title {
@@ -100,7 +101,8 @@
     &__image {
       margin: 0 auto;
       max-height: 50vh;
-      box-shadow: 0 100px 80px rgba(0, 0, 0, 0.1), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.0718854), 0 22.3363px 17.869px rgba(0, 0, 0, 0.0596107), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.05), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.0403893), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.0281146);
+      max-width: 200px;
+      box-shadow: var(--box-shadow);
     }
 
     &__header {

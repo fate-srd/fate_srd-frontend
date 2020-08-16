@@ -1,6 +1,6 @@
 :root {
   --font-color: var(--color-dark);
-  --font-size: 1.125rem;
+  --font-size: clamp(0.9375rem, 1.6vw, 1.125rem);
   --line-height: 1.4;
   --header-color: var(--color-blue-dark);
   --header-line-height: 1;
@@ -21,11 +21,33 @@ p {
   h#{$i} {
     color: var(--header-color);
     line-height: var(--header-line-height);
-    margin: var(--s2) 0 var(--s);
+    margin: calc(var(--s1) * 1.5) 0 var(--s);
+
+    @include breakpoint(1000px) {
+      margin: var(--s2) 0 var(--s);
+    }
   }
+}
+
+h1,
+h2 {
+  font-size: clamp(1.5rem, 3.1vw, 2.375rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 2.1vw, 1.3rem);
 }
 
 ul,
 ol {
   margin: 0 0 var(--s);
+  padding-left: 20px;
+
+  li {
+    margin-bottom: var(--s05);
+  }
 }

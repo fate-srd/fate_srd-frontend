@@ -1,4 +1,6 @@
 .site-main {
+  box-shadow: var(--box-shadow-inset);
+
   &__content {
     @include max-width;
 
@@ -12,11 +14,12 @@
     padding: var(--s05);
 
     @include medium {
+      margin-bottom: var(--s3);
       padding: var(--s);
     }
 
     @include large {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 2fr 5fr;
       grid-template-areas: 'aside main';
       gap: var(--s);
     }
