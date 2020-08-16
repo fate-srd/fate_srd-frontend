@@ -45,7 +45,6 @@
     display: block;
     margin-bottom: var(--s2);
     position: relative;
-    z-index: 100;
     grid-area: patreon;
     align-self: center;
 
@@ -62,7 +61,6 @@
   &__nav {
     margin-bottom: var(--s2);
     position: relative;
-    z-index: 100;
     grid-area: nav;
   }
 

@@ -1,7 +1,7 @@
-Drupal.behaviors.mainMenu = {
+Drupal.behaviors.navInPage = {
   attach(context) {
     const navInPage = context.querySelector('.nav-in-page');
-    const mobileToggle = context.querySelector('.mobile-toggle');
+    const mobileToggle = context.querySelector('.nav-in-page__mobile-toggle');
     const body = context.querySelector('body');
 
     const handleNavInPage = () => {

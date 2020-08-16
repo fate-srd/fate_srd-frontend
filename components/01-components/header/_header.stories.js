@@ -3,6 +3,8 @@ import React from 'react';
 import template from './_header.twig';
 import logo from '../../../images/logo.svg';
 
+import './header';
+
 /**
  * Storybook Definition.
  */

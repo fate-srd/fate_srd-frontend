@@ -1,6 +1,10 @@
 <header class="site-header">
   <div class="site-header__branding">
     <img src={{logo}} alt="" class="site-header__logo">
+    <div class="site-header__branding__menu-toggle">
+      <i class="far fa-bars"></i>
+      <i class="far fa-times"></i>
+    </div>
   </div>
   <div class="site-header__nav">
     <nav class="nav-primary">
@@ -76,11 +80,13 @@
             Downloads
           </a>
         </li>
+        <li class="nav-primary__li nav-primary__li--search">
+          <a class="nav-primary__link" href="#">
+            <i class="fas fa-search"></i>
+            Search
+          </a>
+        </li>
       </ul>
-      <a href="#" class="nav-primary__search">
-        <i class="fas fa-search"></i>
-        Search
-      </a>
     </nav>
   </div>
 </header>

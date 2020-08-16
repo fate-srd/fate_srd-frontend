@@ -1,7 +1,6 @@
 .nav-in-page {
   background: var(--color-yellow);
   padding: var(--s05) var(--s);
-  transition: all 0.5s;
   margin: 0 auto;
 
   @include beforeLarge {
@@ -11,6 +10,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 500;
 
     &__content,
     .fa-times {
@@ -38,7 +38,7 @@
       }
     }
 
-    .mobile-toggle {
+    &__mobile-toggle {
       cursor: pointer;
       padding: var(--s05) 0;
 
@@ -55,7 +55,7 @@
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 
-    .mobile-toggle {
+    &__mobile-toggle {
       i {
         display: none;
       }
