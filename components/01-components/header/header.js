@@ -6,6 +6,7 @@ Drupal.behaviors.headerMenu = {
     const mainMenu = context.querySelector('.nav-primary');
     const body = context.querySelector('body');
     const navInPage = context.querySelector('.nav-in-page');
+    const subToggle = context.querySelector('.nav-primary__sub');
 
     const handleMainMenu = () => {
       mainMenu.classList.toggle('nav-primary--open');
@@ -14,6 +15,11 @@ Drupal.behaviors.headerMenu = {
       navInPage.classList.toggle('hide');
     };
 
+    const handleRulesToggle = () => {
+      subToggle.classList.toggle('nav-primary__sub--open');
+    };
+
     mobileToggle.addEventListener('click', handleMainMenu);
+    subToggle.addEventListener('click', handleRulesToggle);
   },
 };

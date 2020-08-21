@@ -144,12 +144,12 @@
       &:hover {
         background: none;
 
-        i {
-          opacity: .8;
+        .nav-primary__link-icon {
+          opacity: 0.8;
         }
       }
 
-      i {
+      &-icon {
         display: block;
         opacity: 0.4;
         font-size: 2rem;
@@ -157,6 +157,23 @@
         width: 37px;
         text-align: center;
         transition: all 0.15s;
+      }
+    }
+
+    &__sub {
+      cursor: pointer;
+
+      .fa-minus {
+        display: none;
+      }
+
+      &--open {
+        .fa-minus {
+          display: inline;
+        }
+        .fa-plus {
+          display: none;
+        }
       }
     }
   }
@@ -219,7 +236,12 @@
     width: 636px;
     background: var(--color-white);
     border-radius: var(--border-radius);
-    box-shadow: 0 100px 80px rgba(0, 0, 0, 0.37), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.265976), 0 22.3363px 17.869px rgba(0, 0, 0, 0.22056), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.185), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.14944), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.104024);
+    box-shadow: 0 100px 80px rgba(0, 0, 0, 0.37),
+      0 41.7776px 33.4221px rgba(0, 0, 0, 0.265976),
+      0 22.3363px 17.869px rgba(0, 0, 0, 0.22056),
+      0 12.5216px 10.0172px rgba(0, 0, 0, 0.185),
+      0 6.6501px 5.32008px rgba(0, 0, 0, 0.14944),
+      0 2.76726px 2.21381px rgba(0, 0, 0, 0.104024);
     padding: var(--s2);
     column-count: 2;
     column-gap: var(--s2);
@@ -237,7 +259,7 @@
       height: 36.5px;
       top: -3px;
       left: 12px;
-      background: #FFF;
+      background: #fff;
       border-radius: 2px;
       transform: matrix(0.71, 0.69, -0.73, 0.71, 0, 0);
     }
