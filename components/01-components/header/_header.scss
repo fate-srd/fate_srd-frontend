@@ -83,6 +83,10 @@
     @include medium {
       width: 25vw;
     }
+
+    @include large {
+      width: 18vw;
+    }
   }
 
   &__nav {
@@ -113,6 +117,7 @@
       bottom: 0;
       left: 0;
       z-index: 100;
+      overflow: scroll;
     }
 
     &__ul {
@@ -127,8 +132,6 @@
       margin: 0 var(--s025);
       padding: 0;
       list-style: none;
-      display: flex;
-      flex-flow: row nowrap;
     }
 
     &__link {
@@ -171,6 +174,7 @@
         .fa-minus {
           display: inline;
         }
+
         .fa-plus {
           display: none;
         }
@@ -181,6 +185,10 @@
   @include medium {
     display: flex;
     flex-flow: row nowrap;
+
+    &__sub__mobile-toggle {
+      display: none;
+    }
 
     &__ul {
       margin: 0;
@@ -223,6 +231,61 @@
 
 .nav-flyout {
   display: none;
+
+  @include beforeMedium {
+    .nav-primary__sub--open & {
+      display: block;
+    }
+
+    margin-bottom: var(--s);
+    background: var(--color-gray-light);
+    padding: var(--s);
+    border-radius: var(--border-radius);
+    column-count: 2;
+    column-gap: var(--s2);
+    column-rule: 1px solid var(--color-gray-medium);
+
+    &__region {
+      display: inline-block;
+      margin: 0 0 var(--s);
+      padding-bottom: var(--s025);
+      border-bottom: 1px solid var(--color-gray-medium);
+      width: 100%;
+
+      &:nth-child(3n) {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    dt {
+      margin: 0 0 var(--s05);
+      color: var(--color-dark);
+      font-weight: bold;
+      font-size: 0.875rem;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin: 0 0 var(--s05);
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    a {
+      color: var(--color-blue-dark);
+      text-decoration: none;
+      transition: all 0.15s;
+
+      &:hover {
+        color: var(--color-blue-darker);
+        text-decoration: underline;
+      }
+    }
+  }
 
   @include medium {
     display: block;
