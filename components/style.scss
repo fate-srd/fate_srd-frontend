@@ -3,6 +3,21 @@
 @import '~breakpoint-sass/stylesheets/breakpoint';
 
 // Components
-@import '00-tokens/**/*.scss';
-@import '01-components/**/*.scss';
-@import '02-pages/**/*.scss';
+@import '00-tokens/1-colors';
+@import '00-tokens/1-colors-library';
+@import '00-tokens/2-fonts';
+@import '00-tokens/3-type';
+@import '00-tokens/4-space';
+@import '00-tokens/5-breakpoints';
+@import '00-tokens/6-border-radius';
+@import '00-tokens/7-shadows';
+@import '00-tokens/99-misc';
+@import '00-tokens/x-base';
+@import '01-components/footer/footer';
+@import '01-components/header/header';
+@import '01-components/icons/icons';
+@import '01-components/nav-in-page/nav-in-page';
+@import '02-pages/main-layout';
+@import '02-pages/page-wrapper';
+@import '02-pages/basic/basic-bkg';
+@import '02-pages/basic/basic';
