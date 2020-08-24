@@ -4,6 +4,17 @@
   &__content {
     @include max-width;
 
+    padding: var(--s05);
+
+    @include medium {
+      margin-bottom: var(--s3);
+      padding: var(--s);
+    }
+  }
+
+  &__content--aside {
+    @include max-width;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -11,12 +22,6 @@
       'main'
       'aside';
     gap: var(--s);
-    padding: var(--s05);
-
-    @include medium {
-      margin-bottom: var(--s3);
-      padding: var(--s);
-    }
 
     @include large {
       grid-template-columns: 2fr 5fr;

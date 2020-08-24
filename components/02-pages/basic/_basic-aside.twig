@@ -1,7 +1,8 @@
 <div class="page-wrapper">
   {% include "@components/header/_header.twig" %}
   <div class="site-main">
-    <div class="site-main__content">
+    <div class="site-main__content site-main__content--aside">
+
       <main class="main-content-wrapper">
         <p class="rules-section">Fate Accelerated</p>
         <h1 class="page-title">Get Started!</h1>
@@ -45,6 +46,10 @@
         </ul>
         <p>Next, let’s talk about how to use Fate Accelerated to tell stories together.</p>
       </main>
+
+      <aside class="aside-wrapper">
+        {% include "@components/nav-in-page/_nav-in-page.twig" %}
+      </aside>
     </div>
   </div>
   {% include "@components/footer/_footer.twig" %}

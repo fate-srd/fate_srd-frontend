@@ -1,6 +1,7 @@
 import React from 'react';
 
 import template from './_basic.twig';
+import templateAside from './_basic-aside.twig';
 import logo from '../../../images/logo.svg';
 import patreon from '../../../images/become_a_patron_button@2x.png';
 import cover from '../../../images/cover--fae.png';
@@ -17,6 +18,14 @@ export const BasicPage = () => (
   <div
     dangerouslySetInnerHTML={{
       __html: template({ logo, patreon, cover, buyEh, buyDtr, buyItch }),
+    }}
+  />
+);
+
+export const BasicPageWithAside = () => (
+  <div
+    dangerouslySetInnerHTML={{
+      __html: templateAside({ logo, patreon, cover, buyEh, buyDtr, buyItch }),
     }}
   />
 );
