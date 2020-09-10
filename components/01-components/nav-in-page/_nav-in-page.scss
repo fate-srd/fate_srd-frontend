@@ -45,7 +45,7 @@
       i {
         text-align: center;
         width: 16px;
-        opacity: .7;
+        opacity: 0.7;
       }
     }
   }
@@ -73,6 +73,35 @@
   &__ul {
     margin: var(--s) 0 var(--s2);
     padding: 0;
+
+    .nav-in-page__ul--child {
+      margin: 0;
+      padding-left: var(--s05);
+    }
+  }
+
+  &__show-menu {
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: pointer;
+    color: var(--color-yellow-dark);
+
+    &[aria-expanded="false"] {
+      .open {
+        display: none;
+      }
+    }
+
+    &[aria-expanded="true"] {
+      .closed {
+        display: none;
+      }
+    }
   }
 
   &__li {
@@ -80,11 +109,7 @@
     padding: 0;
     list-style: none;
     line-height: 1.2;
-    border-bottom: 1px solid #d3bd00;
-
-    &:first-child {
-      border-top: 1px solid #d3bd00;
-    }
+    border-top: 1px solid #d3bd00;
 
     a {
       display: inline-block;
