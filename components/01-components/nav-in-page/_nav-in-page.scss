@@ -158,6 +158,22 @@
         max-width: 205px;
       }
     }
+
+    &__authorlist {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &:not(:last-child)::after {
+          content: ', ';
+        }
+      }
+    }
   }
 }
 
