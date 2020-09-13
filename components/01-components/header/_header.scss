@@ -55,20 +55,24 @@
         display: none;
       }
 
-      i {
+      svg {
         display: none;
       }
 
-      .fa-bars {
+      .bars {
         display: inline-block;
       }
 
+      .times {
+        display: none;
+      }
+
       &.open {
-        .fa-bars {
+        .bars {
           display: none;
         }
 
-        .fa-times {
+        .times {
           display: inline-block;
         }
       }
@@ -166,16 +170,20 @@
     &__sub {
       cursor: pointer;
 
-      .fa-minus {
+      &__mobile-toggle {
+        margin-left: var(--s05);
+      }
+
+      .minus {
         display: none;
       }
 
       &--open {
-        .fa-minus {
+        .minus {
           display: inline;
         }
 
-        .fa-plus {
+        .plus {
           display: none;
         }
       }
@@ -216,7 +224,7 @@
     &__link {
       @include navLink;
 
-      i {
+      &-icon {
         opacity: 0.4;
         font-size: 2rem;
         margin-bottom: var(--s025);
