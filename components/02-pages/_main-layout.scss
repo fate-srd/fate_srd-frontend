@@ -7,6 +7,28 @@
   @include medium {
     padding: var(--s3) var(--s2);
   }
+
+  &--with-hero {
+    padding: 0;
+
+    .main-content--with-hero__content {
+      padding: var(--s2) calc(var(--s) * 1.5);
+
+      @include medium {
+        padding: var(--s3) var(--s2);
+      }
+    }
+  }
+}
+
+.main-content__hero {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  width: 100%;
+  height: 40vh;
+
+  @include large {
+    min-height: 350px;
+  }
 }
 
 .rules-section {
@@ -40,7 +62,6 @@
 }
 
 .site-main__content {
-
   a,
   a:link {
     color: var(--color-blue);
