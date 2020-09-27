@@ -54,28 +54,6 @@
       @include medium {
         display: none;
       }
-
-      svg {
-        display: none;
-      }
-
-      .bars {
-        display: inline-block;
-      }
-
-      .times {
-        display: none;
-      }
-
-      &.open {
-        .bars {
-          display: none;
-        }
-
-        .times {
-          display: inline-block;
-        }
-      }
     }
   }
 
@@ -108,20 +86,17 @@
     flex-flow: column nowrap;
     padding: var(--s) 0;
 
-    .fa-times {
-      display: none;
-    }
-
     &.nav-primary--open {
       display: flex;
       background: var(--color-blue-darker);
       position: fixed;
-      top: 60px;
+      top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       z-index: 100;
       overflow: scroll;
+      padding-top: 60px;
     }
 
     &__ul {
@@ -382,5 +357,17 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+.site-header__branding--inside {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .nav-primary--open & {
+    display: flex;
   }
 }
