@@ -1,0 +1,17 @@
+.product-list {
+  margin: var(--s2) 0 0;
+  padding: 0;
+}
+
+.product-list__item {
+  margin: 0 0 var(--s);
+  padding: 0;
+  list-style: none;
+
+  span {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
