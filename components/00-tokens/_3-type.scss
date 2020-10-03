@@ -51,3 +51,20 @@ ol {
     margin-bottom: var(--s05);
   }
 }
+
+blockquote {
+  background: var(--color-gray-medium);
+  border-radius: var(--border-radius);
+  margin: 0 0 var(--s2);
+  padding: var(--s2);
+  font-family: sketchnote-text, sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  font-size: 1.0625rem;
+  color: #606060;
+  letter-spacing: 0.5px;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

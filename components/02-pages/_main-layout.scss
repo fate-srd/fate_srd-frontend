@@ -5,7 +5,7 @@
   padding: var(--s2) calc(var(--s) * 1.5);
 
   @include medium {
-    padding: var(--s3) var(--s2);
+    padding: var(--s3);
   }
 
   &--with-hero {
@@ -53,10 +53,19 @@
 .callout {
   background: var(--color-blue-light);
   border-radius: var(--border-radius);
-  padding: var(--s);
-  margin: 0 calc(var(--s) * -1) var(--s);
+  padding: var(--s2);
+  margin: 0 calc(var(--s2) * -1) var(--s);
 
-  p {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  > *:last-child {
     margin-bottom: 0;
   }
 }
