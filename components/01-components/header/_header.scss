@@ -10,7 +10,6 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  max-width: fit-content;
 
   @include navLarge {
     flex-flow: row nowrap;
@@ -179,17 +178,15 @@
       display: flex;
       align-items: stretch;
       width: 100%;
+      gap: 4px;
     }
 
     &__li {
-      margin: 0 var(--s025);
+      margin: 0;
       padding: 0;
       list-style: none;
       display: flex;
-
-      &:first-child {
-        margin-left: 0;
-      }
+      flex-basis: min-content;
 
       &--search {
         margin-left: auto;
