@@ -1,0 +1,109 @@
+.home {
+  &__header {
+    margin-left: auto;
+    padding: 0 var(--s1);
+    position: relative;
+    text-align: center;
+    z-index: 10;
+
+    @include large {
+      max-width: 50vw;
+    }
+
+    h1 {
+      margin-bottom: var(--s);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--color-dark);
+    }
+  }
+
+  &__woman-running {
+    display: none;
+    height: 541px;
+    width: 577px;
+    position: absolute !important;
+    top: -90px;
+    left: -475px;
+
+    @include large {
+      display: block;
+    }
+  }
+}
+
+.home__story-focused {
+  min-height: 500px;
+  margin-right: calc(var(--s3) * -1);
+  margin-left: calc(var(--s3) * -1);
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    background: linear-gradient(
+      0deg,
+      #f9f9f9 13.11%,
+      #fff8b9 28.26%,
+      #fff8b9 72.18%,
+      #f9f9f9 85.81%
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: skew(0turn, 5deg);
+  }
+
+  @include large {
+    margin-top: 150px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    max-width: 400px;
+    margin: 0 0 0 8rem;
+    order: 1;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__scifi {
+    display: block;
+    width: 684.17px;
+    height: 514.27px;
+    order: 2;
+    right: -6rem;
+  }
+}
+
+.home__whatyouwant {
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: -100px;
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    max-width: 500px;
+    margin: 0 0 0 8rem;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__monks {
+    display: block;
+    width: 512px;
+    height: 395px;
+  }
+}
