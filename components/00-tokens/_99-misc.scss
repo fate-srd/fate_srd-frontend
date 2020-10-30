@@ -14,3 +14,14 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+@mixin listResetUl() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin ListResetLi() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
