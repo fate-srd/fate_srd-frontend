@@ -1,6 +1,7 @@
 :root {
   --font-color: var(--color-dark);
   --font-size: clamp(0.9375rem, 1.6vw, 1.125rem);
+  --font-size-small: clamp(0.8375rem, 1.4vw, 1rem);
   --line-height: 1.4;
   --header-color: var(--color-blue-dark);
   --header-line-height: 1;
@@ -15,6 +16,10 @@ body {
 
 p {
   margin: 0 0 var(--s);
+}
+
+.small {
+  font-size: var(--font-size-small);
 }
 
 @for $i from 1 through 6 {

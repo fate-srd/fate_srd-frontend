@@ -6,18 +6,37 @@
 }
 
 .home__section--hero {
-  text-align: center;
   max-width: 900px;
   margin: 0 auto var(--s3);
+
+  @include large {
+    text-align: center;
+    margin-bottom: var(--s5);
+  }
 
   .page-title {
     font-size: clamp(2.3rem, 4.3vw, 3.555555556rem);
   }
 }
 
+.fudge-dice {
+  display: block;
+  max-width: 337px;
+  height: 187px;
+  width: 100%;
+  margin-bottom: var(--s2);
+}
+
 .grid-2up {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+
+  @include large {
+    gap: 2rem;
+    max-width: 900px;
+  }
 }
 
 .section__fate-core {
@@ -44,7 +63,7 @@
 
   display: grid;
   gap: var(--s);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   align-items: stretch;
   margin: 0 auto;
 
@@ -53,13 +72,21 @@
     gap: var(--s3);
   }
 
+  &--2up {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+    width: max-content;
+  }
+
   &__item {
-    @include ListResetLi;
+    @include listResetLi;
 
     display: flex;
 
     @include large {
-      padding-top: 120px;
+      &--space-above {
+        padding-top: 120px;
+      }
     }
   }
 
@@ -71,6 +98,7 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    width: 100%;
 
     h3 {
       margin: 0 0 var(--s);
@@ -79,6 +107,12 @@
     p {
       margin-bottom: var(--s2);
     }
+  }
+
+  &__item__image {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin: calc(-1 * var(--s2));
+    margin-bottom: var(--s2);
   }
 
   &__button {
@@ -107,7 +141,7 @@
 
     @include large {
       color: var(--color-yellow-light);
-      font-family: Sketchnote Text;
+      font-family: sketchnote-text, sans-serif;
       font-size: 1.125rem;
       position: absolute;
       top: -100px;
@@ -168,8 +202,13 @@
     padding: var(--s) var(--s3) var(--s5);
   }
 
+  &--lightBlue {
+    background: var(--color-blue);
+  }
+
   h2 {
     color: var(--color-white);
     text-align: center;
+    margin-bottom: var(--s2);
   }
 }

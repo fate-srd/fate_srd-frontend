@@ -19,9 +19,17 @@
   padding: 0;
   margin: 0;
 }
+.reset-ul {
+  @include listResetUl();
+}
 
-@mixin ListResetLi() {
+@mixin listResetLi() {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.full-reset-ul {
+  @include listResetUl();
+  @include listResetLi();
 }
