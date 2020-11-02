@@ -74,8 +74,12 @@
 
   &--2up {
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-    width: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @include large {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+      width: max-content;
+    }
   }
 
   &__item {
