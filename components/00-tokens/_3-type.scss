@@ -47,6 +47,30 @@ h4 {
   font-size: clamp(1rem, 2.1vw, 1.3rem);
 }
 
+.anchor {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-left: var(--s05);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  h3 & {
+    width: 18px;
+    height: 18px;
+  }
+
+  h4 & {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 ul,
 ol {
   margin: 0 0 var(--s);

@@ -3,6 +3,7 @@
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: var(--s2) calc(var(--s) * 1.5);
+  scroll-behavior: smooth;
 
   @include medium {
     padding: var(--s3);
