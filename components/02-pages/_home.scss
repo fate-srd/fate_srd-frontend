@@ -78,7 +78,7 @@
 
     @include large {
       grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
-      width: max-content;
+      max-width: calc(700px + var(--s3));
     }
   }
 
