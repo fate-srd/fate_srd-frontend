@@ -126,6 +126,11 @@
       &:hover {
         text-decoration: underline;
       }
+
+      &.active {
+        color: var(--color-gray-dark);
+        font-weight: bold;
+      }
     }
   }
 
