@@ -33,3 +33,9 @@
   @include listResetUl();
   @include listResetLi();
 }
+
+.codex-cover {
+  width: 35%;
+  float: right;
+  margin-left: var(--s);
+}
