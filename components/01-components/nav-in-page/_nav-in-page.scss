@@ -128,7 +128,7 @@
       }
 
       &.active {
-        color: var(--color-gray-dark);
+        color: var(--color-gray-dark) !important;
         font-weight: bold;
       }
     }

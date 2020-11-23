@@ -215,4 +215,48 @@
     text-align: center;
     margin-bottom: var(--s2);
   }
+
+  &--playing-online {
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 100;
+  }
+
+  .playing-online {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .playing-button {
+    display: inline-block;
+    background: var(--color-yellow);
+    border-radius: var(--border-radius-small);
+    color: var(--color-dark) !important;
+    text-decoration: none;
+    padding: var(--s05) var(--s);
+    margin-top: auto;
+    align-self: flex-start;
+
+    &:hover {
+      background: #d8c684;
+    }
+  }
 }
