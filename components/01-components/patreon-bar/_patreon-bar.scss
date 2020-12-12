@@ -10,7 +10,7 @@
 
     display: flex;
     flex-flow: column wrap;
-    padding: var(--s05) var(--s05) var(--s05) var(--s05);
+    padding: var(--s05) var(--s);
     position: relative;
 
     @include large {
@@ -27,7 +27,6 @@
 .patreon-bar__logo {
   display: block;
   margin: 0 var(--s) var(--s05) 0;
-  height: 100%;
   max-width: 116px;
 
   @include large {

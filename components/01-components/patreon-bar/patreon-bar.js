@@ -1,4 +1,4 @@
-function temp() {
+function patronBar() {
   const patreonBarCookieName = 'Patreon Bar';
   const patreonBar = document.querySelector('.patreon-bar');
 
@@ -32,4 +32,4 @@ function temp() {
   handlePatreonBar();
 }
 
-setTimeout(temp, 1000);
+setTimeout(patronBar, 1000);
