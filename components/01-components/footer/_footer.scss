@@ -1,5 +1,5 @@
 .site-footer {
-  background: rgba(46, 45, 45, .6);
+  background: rgba(46, 45, 45, 0.6);
   color: var(--color-white);
   position: relative;
 
@@ -36,8 +36,8 @@
       grid-template-columns: repeat(4, 1fr);
       grid-gap: var(--s3);
       grid-template-areas:
-        "logo patreon text text"
-        "nav nav text text";
+        'logo patreon text text'
+        'nav nav text text';
     }
   }
 
@@ -62,6 +62,11 @@
     margin-bottom: var(--s2);
     position: relative;
     grid-area: nav;
+
+    @include medium {
+      display: flex;
+      gap: 4rem;
+    }
   }
 
   &__ul {
@@ -107,5 +112,4 @@
       margin-bottom: var(--s05);
     }
   }
-
 }
