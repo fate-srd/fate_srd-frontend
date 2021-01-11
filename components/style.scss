@@ -3,12 +3,12 @@
 @import '~breakpoint-sass/stylesheets/breakpoint';
 
 // Components
+@import '00-tokens/0-breakpoints';
+@import '00-tokens/4-space';
 @import '00-tokens/1-colors';
 @import '00-tokens/1-colors-library';
 @import '00-tokens/2-fonts';
 @import '00-tokens/3-type';
-@import '00-tokens/4-space';
-@import '00-tokens/5-breakpoints';
 @import '00-tokens/6-border-radius';
 @import '00-tokens/7-shadows';
 @import '00-tokens/8-aspects';

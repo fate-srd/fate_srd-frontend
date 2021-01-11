@@ -52,10 +52,10 @@
 }
 
 .callout {
+  @include calloutBoxes;
+
   background: var(--color-blue-light);
   border-radius: var(--border-radius);
-  padding: var(--s2);
-  margin: 0 calc(var(--s2) * -1) var(--s);
 
   h1,
   h2,
