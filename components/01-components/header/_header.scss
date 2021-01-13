@@ -58,7 +58,6 @@
 
   &__logo {
     display: block;
-    filter: var(--logo-shadow);
     width: 50vw;
 
     @include medium {

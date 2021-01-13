@@ -18,7 +18,6 @@
 
   &__logo {
     display: block;
-    filter: var(--logo-shadow);
     width: 250px;
 
     @include medium {
