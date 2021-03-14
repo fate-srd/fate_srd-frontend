@@ -347,6 +347,12 @@
 .has-nav-flyout {
   position: relative;
 
+  &:focus-within .nav-flyout {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   &:hover {
     .nav-flyout {
       visibility: visible;
