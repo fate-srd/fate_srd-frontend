@@ -1,6 +1,8 @@
 @mixin navLink {
+  background: transparent;
   color: var(--color-white);
   border-radius: 6px;
+  border: none;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1;
@@ -140,6 +142,18 @@
       }
     }
 
+    .has-nav-flyout.open {
+      .nav-primary__sub__mobile-toggle {
+        &.minus {
+          display: inline;
+        }
+
+        &.plus {
+          display: none;
+        }
+      }
+    }
+
     &__sub {
       cursor: pointer;
 
@@ -149,16 +163,6 @@
 
       .minus {
         display: none;
-      }
-
-      &--open {
-        .minus {
-          display: inline;
-        }
-
-        .plus {
-          display: none;
-        }
       }
     }
   }
@@ -194,6 +198,7 @@
 
     &__link {
       @include navLink;
+      white-space: nowrap;
 
       &-icon {
         opacity: 0.4;
@@ -212,7 +217,7 @@
   display: none;
 
   @include beforeMedium {
-    .nav-primary__sub--open & {
+    .open & {
       display: block;
     }
 
@@ -224,6 +229,12 @@
     column-gap: var(--s2);
     column-rule: 1px solid var(--color-gray-medium);
 
+    &--simple {
+      column-count: 1;
+      column-rule: none;
+      width: auto;
+    }
+
     &__region {
       display: inline-block;
       margin: 0 0 var(--s);
@@ -234,6 +245,12 @@
       &:nth-child(3n) {
         margin-bottom: 0;
         border-bottom: none;
+      }
+
+      &--simple {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
       }
     }
 
@@ -289,6 +306,12 @@
     column-gap: var(--s2);
     column-rule: 1px solid var(--color-gray-medium);
 
+    &--simple {
+      column-count: 1;
+      column-rule: none;
+      width: auto;
+    }
+
     @include large {
       top: 60px;
       left: 0;
@@ -315,9 +338,15 @@
         margin-bottom: 0;
         border-bottom: none;
       }
+
+      &--simple {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
     }
 
     dt {
+      margin-bottom: var(--s05);
       color: var(--color-dark);
       font-weight: bold;
       font-size: 0.875rem;
@@ -325,16 +354,18 @@
     }
 
     dd {
-      margin: 0;
+      margin: 0 0 var(--s05);
       display: block;
       font-weight: 600;
       font-size: 1.5rem;
+      line-height: 1.1;
     }
 
     a {
       color: var(--color-blue-dark);
       text-decoration: none;
       transition: all 0.15s;
+      white-space: nowrap;
 
       &:hover {
         color: var(--color-blue-darker);
@@ -348,10 +379,10 @@
   position: relative;
 
   &:focus-within .nav-flyout {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
-    }
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   &:hover {
     .nav-flyout {
