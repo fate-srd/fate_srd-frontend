@@ -20,6 +20,11 @@
       }
     }
   }
+
+  &--store {
+    background: transparent;
+    padding: var(--s);
+  }
 }
 
 .main-content__hero {
