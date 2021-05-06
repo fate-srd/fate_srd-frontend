@@ -1,7 +1,11 @@
 .store-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--s4);
+
+  @include large {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .main-content-wrapper .store-card {
@@ -21,16 +25,18 @@
     z-index: 100;
 
     .store-card__image {
-      transform: scale(1.1) rotate(0);
-      margin-right: -1rem;
-      margin-top: -1.5rem;
+      transform: scale(1.15) rotate(1deg);
     }
+  }
+
+  &__image-content {
+    height: 300px;
+    text-align: center;
   }
 
   &__content {
     display: flex;
     flex-flow: column nowrap;
-    height: 100%;
     padding: 0 var(--s2) var(--s2);
     position: relative;
   }
@@ -40,11 +46,9 @@
       0 6.7px 5.3px 0 rgba(0, 0, 0, 0.08), 0 12.5px 10px 0 rgba(0, 0, 0, 0.1),
       0 22.3px 17.9px 0 rgba(0, 0, 0, 0.13),
       0 41.8px 33.4px 0 rgba(0, 0, 0, 0.15);
-    float: right;
-    width: 35%;
-    margin: -1rem -0.5rem 1rem 1.5rem;
+    max-height: 300px;
     transition: all 0.15s;
-    transform: scale(1) rotate(1deg);
+    transform: scale(1.05) rotate(1deg);
   }
 
   &__button {

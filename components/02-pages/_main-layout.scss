@@ -23,7 +23,8 @@
 
   &--store {
     background: transparent;
-    padding: var(--s) var(--s) var(--s05) 0;
+    box-shadow: none;
+    padding: var(--s) 0 var(--s05) 0;
   }
 }
 
