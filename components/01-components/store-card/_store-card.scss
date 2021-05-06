@@ -3,7 +3,10 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: var(--s4);
 }
+
 .main-content-wrapper .store-card {
+  display: flex;
+  flex-flow: column nowrap;
   border-radius: var(--border-radius-small);
   box-shadow: 0 2.8px 2.2px 0 rgba(0, 0, 0, 0.06),
     0 6.7px 5.3px 0 rgba(0, 0, 0, 0.08), 0 12.5px 10px 0 rgba(0, 0, 0, 0.1),
@@ -25,6 +28,9 @@
   }
 
   &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
     padding: 0 var(--s2) var(--s2);
     position: relative;
   }
@@ -49,7 +55,6 @@
     font-weight: 800;
     text-decoration: none;
     padding: var(--s05) var(--s);
-    margin-top: auto;
     align-self: flex-start;
     text-transform: uppercase;
     margin-bottom: var(--s05);
@@ -79,6 +84,27 @@
     img {
       max-width: 110px;
     }
+
+    &__link {
+      display: block;
+      width: 110px;
+      height: 25.3px;
+      text-indent: -5000px;
+
+      &[href^="https://www.drivethrucards.com"],
+      &[href^="https://www.drivethrurpg.com"]
+      {
+        background: url('../images/store/store-buy-dtr.png') top left no-repeat;
+        background-size: contain;
+      }
+
+      &[href^="https://amazingrando.itch.io"]
+      {
+        background: url('../images/store/store-buy--itch.png') top left
+          no-repeat;
+        background-size: contain;
+      }
+    }
   }
 
   &__dollar-sign {
@@ -91,21 +117,4 @@
       font-size: 0.6rem;
     }
   }
-
-  // [href^="https://www.drivethrucards.com"]
-  // {
-  //   border: 1px solid red;
-  // }
-
-  // [href^="https://amazingrando.itch.io"]
-  // {
-  //   border: 1px solid red;
-  // }
 }
-
-// <li>
-//             <a href="https://www.drivethrucards.com/product/146133/Turn-Tracker-Initiative-Cards">DriveThruRPG</a>
-//           </li>
-//           <li>
-//             <a href="https://amazingrando.itch.io/book-of-hanz">Itch.io</a>
-//           </li>
