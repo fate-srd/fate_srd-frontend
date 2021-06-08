@@ -116,7 +116,8 @@
     line-height: 1.2;
     border-top: 1px solid #d3bd00;
 
-    a {
+    .nav-in-page__link,
+    .nav-in-page__link:link {
       display: inline-block;
       color: var(--color-blue-dark);
       text-decoration: none;
