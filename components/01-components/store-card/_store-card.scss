@@ -74,6 +74,11 @@
     }
   }
 
+  .gumroad-button {
+    color: var(--font-color) !important;
+    width: max-content;
+  }
+
   &__also-available {
     @include listResetUl();
 
@@ -108,17 +113,6 @@
           no-repeat;
         background-size: contain;
       }
-    }
-  }
-
-  &__dollar-sign {
-    font-size: 0.9rem;
-    font-weight: normal;
-    position: relative;
-    top: -3px;
-
-    &--small {
-      font-size: 0.6rem;
     }
   }
 }
