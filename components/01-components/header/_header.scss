@@ -198,6 +198,7 @@
 
     &__link {
       @include navLink;
+      
       white-space: nowrap;
 
       &-icon {
