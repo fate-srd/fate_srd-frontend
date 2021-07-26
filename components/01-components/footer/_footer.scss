@@ -35,8 +35,9 @@
       grid-template-columns: repeat(4, 1fr);
       grid-gap: var(--s3);
       grid-template-areas:
-        'logo patreon text text'
-        'nav nav text text';
+        'logo patreon email email'
+        'nav nav email email'
+        'legal legal legal legal';
     }
   }
 
@@ -95,7 +96,7 @@
 
   &__legal {
     font-size: 0.8125rem;
-    grid-area: text;
+    grid-area: legal;
 
     a {
       color: var(--color-yellow-light);
@@ -109,6 +110,20 @@
 
     p {
       margin-bottom: var(--s05);
+    }
+  }
+
+  &__email {
+    grid-area: email;
+    text-align: center;
+
+    h3 {
+      color: var(--color-white);
+      margin-top: 0;
+    }
+
+    &__signup {
+      background: rgba(255, 255, 255, 0.8);
     }
   }
 }
