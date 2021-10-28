@@ -22,15 +22,18 @@ p {
   font-size: var(--font-size-small);
 }
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    color: var(--header-color);
-    line-height: var(--header-line-height);
-    margin: calc(var(--s1) * 1.5) 0 var(--s);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-color);
+  line-height: var(--header-line-height);
+  margin: calc(var(--s1) * 1.5) 0 var(--s);
 
-    @include breakpoint(1000px) {
-      margin: var(--s2) 0 var(--s);
-    }
+  @include breakpoint(1000px) {
+    margin: var(--s2) 0 var(--s);
   }
 }
 
@@ -89,7 +92,7 @@ blockquote {
   font-family: sketchnote-text, sans-serif;
   font-weight: 400;
   line-height: 1.8;
-  font-size: --font-size;
+  font-size: var(--font-size);
   color: #606060;
   letter-spacing: 0.5px;
 

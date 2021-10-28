@@ -1,8 +1,9 @@
-// Libraries
 @import '~normalize.css/normalize';
 @import '~breakpoint-sass/stylesheets/breakpoint';
 
-// Components
+/**
+ * Components
+ */
 @import '00-tokens/0-breakpoints';
 @import '00-tokens/4-space';
 @import '00-tokens/1-colors';

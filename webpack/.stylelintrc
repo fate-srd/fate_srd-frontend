@@ -28,6 +28,7 @@
     "color-function-notation": "legacy",
     "number-max-precision": null,
     "length-zero-no-unit": null,
-    "font-family-name-quotes": null
+    "font-family-name-quotes": null,
+    "no-invalid-double-slash-comments": null
   }
 }
