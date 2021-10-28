@@ -4,22 +4,30 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "at-rule-no-unknown": [ true, {
-      "ignoreAtRules": [
-        "include",
-        "mixin",
-        "extend",
-        "if",
-        "else",
-        "each",
-        "content",
-        "import",
-        "function",
-        "return",
-        "for"
-      ]
-    }],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "include",
+          "mixin",
+          "extend",
+          "if",
+          "else",
+          "each",
+          "content",
+          "import",
+          "function",
+          "return",
+          "for"
+        ]
+      }
+    ],
     "no-descending-specificity": null,
-    "function-calc-no-invalid": null
+    "selector-class-pattern": null,
+    "alpha-value-notation": "number",
+    "color-function-notation": "legacy",
+    "number-max-precision": null,
+    "length-zero-no-unit": null,
+    "font-family-name-quotes": null
   }
 }

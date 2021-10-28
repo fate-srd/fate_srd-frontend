@@ -1,5 +1,4 @@
 const path = require('path');
-const globImporter = require('node-sass-glob-importer');
 const _StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = async ({ config }) => {
@@ -41,9 +40,6 @@ module.exports = async ({ config }) => {
         loader: 'sass-loader',
         options: {
           sourceMap: true,
-          sassOptions: {
-            importer: globImporter(),
-          },
         },
       },
     ],
