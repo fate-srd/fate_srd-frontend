@@ -1,5 +1,7 @@
 const path = require('path');
 const _StyleLintPlugin = require('stylelint-webpack-plugin');
+const { namespaces } = require('./setupTwig');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = async ({ config }) => {
   // Twig
@@ -10,15 +12,7 @@ module.exports = async ({ config }) => {
         loader: 'twig-loader',
         options: {
           twigOptions: {
-            namespaces: {
-              tokens: path.resolve(__dirname, '../', 'components/00-tokens'),
-              components: path.resolve(
-                __dirname,
-                '../',
-                'components/01-components',
-              ),
-              pages: path.resolve(__dirname, '../', 'components/02-pages'),
-            },
+            namespaces,
           },
         },
       },
@@ -38,9 +32,6 @@ module.exports = async ({ config }) => {
       },
       {
         loader: 'sass-loader',
-        options: {
-          sourceMap: true,
-        },
       },
     ],
   });
@@ -53,22 +44,16 @@ module.exports = async ({ config }) => {
       failOnError: false,
       quiet: false,
     }),
+    new ESLintPlugin({
+      context: path.resolve(__dirname, '../', 'components'),
+      extensions: ['js'],
+    }),
   );
 
   // YAML
   config.module.rules.push({
     test: /\.ya?ml$/,
     loader: 'js-yaml-loader',
-  });
-
-  // JS
-  config.module.rules.push({
-    test: /\.js$/,
-    exclude: /node_modules/,
-    loader: 'eslint-loader',
-    options: {
-      cache: true,
-    },
   });
 
   return config;

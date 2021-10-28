@@ -1,5 +1,3 @@
-import React from 'react';
-
 import template from './_nav-in-page.twig';
 import logo from '../../../images/logo.svg';
 import patreon from '../../../images/become_a_patron_button@2x.png';
@@ -15,10 +13,5 @@ import './nav-in-page';
  */
 export default { title: 'Regions/Nav In Page' };
 
-export const NavInPage = () => (
-  <div
-    dangerouslySetInnerHTML={{
-      __html: template({ logo, patreon, cover, buyEh, buyDtr, buyItch }),
-    }}
-  />
-);
+export const NavInPage = () =>
+  template({ logo, patreon, cover, buyEh, buyDtr, buyItch });

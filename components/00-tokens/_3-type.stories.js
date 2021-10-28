@@ -1,5 +1,3 @@
-import React from 'react';
-
 import data from './_3-type';
 
 /**
@@ -7,4 +5,4 @@ import data from './_3-type';
  */
 export default { title: 'Tokens/Type' };
 
-export const Type = () => <div dangerouslySetInnerHTML={{ __html: data }} />;
+export const Type = () => data();

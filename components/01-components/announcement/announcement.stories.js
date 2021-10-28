@@ -1,5 +1,3 @@
-import React from 'react';
-
 import template from './_announcement.twig';
 
 /**
@@ -7,6 +5,4 @@ import template from './_announcement.twig';
  */
 export default { title: 'Regions/Announcement' };
 
-export const SiteFooter = () => (
-  <div dangerouslySetInnerHTML={{ __html: template() }} />
-);
+export const Announcement = () => template();

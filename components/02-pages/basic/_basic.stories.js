@@ -1,5 +1,3 @@
-import React from 'react';
-
 import template from './_basic.twig';
 import templateAside from './_basic-aside.twig';
 import logo from '../../../images/logo.svg';
@@ -14,18 +12,7 @@ import buyItch from '../../../images/buy--itch.png';
  */
 export default { title: 'Page/Basic' };
 
-export const BasicPage = () => (
-  <div
-    dangerouslySetInnerHTML={{
-      __html: template({ logo, patreon, cover, buyEh, buyDtr, buyItch }),
-    }}
-  />
-);
-
-export const BasicPageWithAside = () => (
-  <div
-    dangerouslySetInnerHTML={{
-      __html: templateAside({ logo, patreon, cover, buyEh, buyDtr, buyItch }),
-    }}
-  />
-);
+export const BasicPage = () =>
+  template({ logo, patreon, cover, buyEh, buyDtr, buyItch });
+export const BasicPageWithAside = () =>
+  templateAside({ logo, patreon, cover, buyEh, buyDtr, buyItch });
