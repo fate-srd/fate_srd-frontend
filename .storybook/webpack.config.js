@@ -31,7 +31,14 @@ module.exports = async ({ config }) => {
         },
       },
       {
-        loader: 'sass-loader',
+        loader: 'postcss-loader',
+        options: {
+          ident: 'postcss',
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer'),
+          ],
+        },
       },
     ],
   });
@@ -40,7 +47,7 @@ module.exports = async ({ config }) => {
     new _StyleLintPlugin({
       configFile: path.resolve(__dirname, '../', 'webpack/.stylelintrc'),
       context: path.resolve(__dirname, '../', 'components'),
-      files: '**/*.scss',
+      files: '**/*.css',
       failOnError: false,
       quiet: false,
     }),
