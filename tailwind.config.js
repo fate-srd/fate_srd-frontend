@@ -1,6 +1,6 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}",],
+  darkMode: false,
   theme: {
     colors: {
       white: {
@@ -50,9 +50,6 @@ module.exports = {
     dropShadow: {
       DEFAULT: 'drop-shadow(0 100px 80px rgba(0, 0, 0, 0.07)) drop-shadow(0 16.6967px 33.4221px rgba(0, 0, 0, 0.0723856)) drop-shadow(0 10.7449px 17.869px rgba(0, 0, 0, 0.0732421)) drop-shadow(0 8.21048px 10.0172px rgba(0, 0, 0, 0.0717905)) drop-shadow(0 5.99024px 5.32008px rgba(0, 0, 0, 0.0663313)) drop-shadow(0 3.32879px 2.21381px rgba(0, 0, 0, 0.051554))',
     },
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [],
