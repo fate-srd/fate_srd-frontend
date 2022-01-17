@@ -33,6 +33,7 @@ module.exports = {
       inter: ['Inter', 'HelveticaNeue', 'Helvetica', 'Arial', 'sans-serif'],
     },
     fontSize: {
+      xs: 'clamp(0.6375rem, 1.4vw, 0.8rem)',
       sm: 'clamp(0.8375rem, 1.4vw, 1rem)',
       base: 'clamp(0.9375rem, 1.6vw, 1.125rem)',
       lg: 'clamp(1rem, 2.1vw, 1.3rem)',
