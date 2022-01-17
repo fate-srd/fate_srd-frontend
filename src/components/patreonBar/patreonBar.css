@@ -1,0 +1,44 @@
+.patreon-bar {
+  @apply hidden;
+  @apply bg-patreon text-white font-bold uppercase;
+}
+
+.patreon-bar.patreon-bar--show {
+  @apply block;
+}
+
+.patreon-bar__inner {
+  @apply mx-auto relative;
+  @apply flex flex-col flex-wrap gap-2;
+  @apply lg:flex-row lg:items-center lg:gap-4;
+  @apply px-4 py-3;
+  
+  max-width: var(--max-width);
+}
+
+.patreon-bar__logo {
+  @apply block;
+  @apply lg:mt-8 lg:mb-4;
+  @apply lg:my-0;
+
+  max-width: 116px; 
+}
+
+.patreon-bar__button {
+  @apply inline-block rounded-full transition-all;
+  @apply bg-patreon-darker text-white no-underline text-center;
+  @apply px-4 py-1;
+  @apply hover:bg-patreon-darkerHover;
+}
+
+.patreon-bar__close {
+  @apply opacity-80 absolute top-3 right-4;
+  @apply font-bold uppercase;
+  @apply transition-all;
+  @apply hover:opacity-100;
+  @apply lg:static lg:ml-auto;
+}
+
+.patreon-bar__close__icon {
+  @apply inline-block ml-1;
+}

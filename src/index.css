@@ -1,2 +1,8 @@
 @import './tailwind.css';
-@import './components/tokens/fonts/font-fate.css';
+
+:root {
+  --max-width: 1279px;
+}
+
+@import "./components/tokens/fonts/font-fate.css";
+@import "./components/patreonBar/patreonBar.css";

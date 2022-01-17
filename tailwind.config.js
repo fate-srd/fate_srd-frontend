@@ -24,6 +24,8 @@ module.exports = {
       },
       patreon: {
         DEFAULT: '#E85B46',
+        darker: '#bd422f',
+        darkerHover: '#af3c2a',
       },
     },
     fontFamily: {
@@ -41,6 +43,7 @@ module.exports = {
       none: '0',
       sm: '3px',
       DEFAULT: '5px',
+      full: '9999px',
     },
     boxShadow: {
       DEFAULT:
