@@ -1,0 +1,98 @@
+.site-footer {
+  @apply text-white relative pt-8;
+
+  background-image: url('../../images/tweed.png');
+  background-color: rgba(46, 45, 45, 0.6);
+}
+
+.site-footer__content {
+  @apply py-4 pl-6 pr-8;
+  @apply lg:grid lg:gap-16;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'logo patreon email email'
+    'nav nav email email'
+    'legal legal legal legal';
+  max-width: var(--max-width);
+}
+
+.site-footer__logo {
+  @apply block;
+
+  width: 250px;
+}
+
+.site-footer__logo-wrapper {
+  @apply relative self-center;
+  @apply mb-8 lg:mb-0;
+
+  grid-area: logo;
+  width: 275px;
+  height: 50px;
+}
+
+.site-footer__patreon {
+  @apply block relative self-center;
+  @apply mb-8 lg:mb-0;
+
+  grid-area: patreon;
+}
+
+.site-footer__patreon-img {
+  max-width: 177px;
+}
+
+.site-footer__nav {
+  @apply relative;
+  @apply mb-8;
+  @apply md:flex md:gap-16;
+
+  grid-area: nav; 
+}
+
+.site-footer__ul li {
+  @apply mb-2;
+}
+
+.site-footer__link {
+  @apply inline-block text-white;
+  @apply font-bold no-underline;
+  @apply transition-all;
+  @apply hover:text-yellow-300 hover:underline;
+}
+
+.site-footer__legal {
+  @apply text-xs;
+
+  grid-area: legal;
+}
+
+.site-footer__legal a {
+  @apply text-yellow-300 no-underline transition-all hover:underline;
+}
+
+.site-footer__legal p {
+  @apply mb-2;
+}
+
+.site-footer__email {
+  @apply text-center;
+
+  grid-area: email;
+}
+
+.site-footer__email h3 {
+  @apply text-white font-bold text-xl leading-tight mb-4;
+}
+
+.site-footer__email h3 span {
+  @apply block;
+}
+
+.site-footer__email__signup {
+  @apply mx-auto;
+
+  background: rgba(255, 255, 255, 0.8);
+  min-height: 300px;
+}
