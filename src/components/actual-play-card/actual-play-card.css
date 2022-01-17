@@ -1,0 +1,20 @@
+.actual-play-card {
+  @apply flex flex-col gap-1;
+}
+
+.actual-play-card__title {
+  @apply text-lg font-bold leading-6;
+  @apply text-blue-200; 
+  @apply hover:text-blue-500;
+  @apply transition-all;
+}
+
+.actual-play-card__img {
+  @apply mb-2;
+}
+
+.actual-play-card-wrapper {
+  @apply grid gap-8;
+  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
