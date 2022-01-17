@@ -1,17 +1,16 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
-  darkMode: false,
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     colors: {
       white: {
-        DEFAULT: '#fff'
+        DEFAULT: '#fff',
       },
       blue: {
         100: '#DBEFFF',
         200: '#1B75BC',
         500: '#0D436D',
         700: '#0A3B62',
-        900: '#063255'
+        900: '#063255',
       },
       gray: {
         100: '#F9F9F9',
@@ -21,10 +20,10 @@ module.exports = {
       yellow: {
         300: '#FFF8B9',
         500: '#FFEA9F',
-        700: '#95813A'
+        700: '#95813A',
       },
       patreon: {
-        DEFAULT: '#E85B46'
+        DEFAULT: '#E85B46',
       },
     },
     fontFamily: {
@@ -41,16 +40,19 @@ module.exports = {
     borderRadius: {
       none: '0',
       sm: '3px',
-      DEFAULT: '5px'
+      DEFAULT: '5px',
     },
     boxShadow: {
-      DEFAULT: '0 50.0488px 40.0391px rgba(0, 0, 0, 0.0711761), 0 30.1471px 24.1177px rgba(0, 0, 0, 0.0715712), 0 19.3198px 15.4559px rgba(0, 0, 0, 0.0709344), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.0688567), 0 7.88218px 6.30574px rgba(0, 0, 0, 0.0645926)',
-      inset: '0 50.0488px 40.0391px rgba(0, 0, 0, 0.0711761) inset, 0 30.1471px 24.1177px rgba(0, 0, 0, 0.0715712) inset, 0 19.3198px 15.4559px rgba(0, 0, 0, 0.0709344) inset, 0 12.5216px 10.0172px rgba(0, 0, 0, 0.0688567) inset, 0 7.88218px 6.30574px rgba(0, 0, 0, 0.0645926) inset',
+      DEFAULT:
+        '0 50.0488px 40.0391px rgba(0, 0, 0, 0.0711761), 0 30.1471px 24.1177px rgba(0, 0, 0, 0.0715712), 0 19.3198px 15.4559px rgba(0, 0, 0, 0.0709344), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.0688567), 0 7.88218px 6.30574px rgba(0, 0, 0, 0.0645926)',
+      inset:
+        '0 50.0488px 40.0391px rgba(0, 0, 0, 0.0711761) inset, 0 30.1471px 24.1177px rgba(0, 0, 0, 0.0715712) inset, 0 19.3198px 15.4559px rgba(0, 0, 0, 0.0709344) inset, 0 12.5216px 10.0172px rgba(0, 0, 0, 0.0688567) inset, 0 7.88218px 6.30574px rgba(0, 0, 0, 0.0645926) inset',
     },
     dropShadow: {
-      DEFAULT: 'drop-shadow(0 100px 80px rgba(0, 0, 0, 0.07)) drop-shadow(0 16.6967px 33.4221px rgba(0, 0, 0, 0.0723856)) drop-shadow(0 10.7449px 17.869px rgba(0, 0, 0, 0.0732421)) drop-shadow(0 8.21048px 10.0172px rgba(0, 0, 0, 0.0717905)) drop-shadow(0 5.99024px 5.32008px rgba(0, 0, 0, 0.0663313)) drop-shadow(0 3.32879px 2.21381px rgba(0, 0, 0, 0.051554))',
+      DEFAULT:
+        'drop-shadow(0 100px 80px rgba(0, 0, 0, 0.07)) drop-shadow(0 16.6967px 33.4221px rgba(0, 0, 0, 0.0723856)) drop-shadow(0 10.7449px 17.869px rgba(0, 0, 0, 0.0732421)) drop-shadow(0 8.21048px 10.0172px rgba(0, 0, 0, 0.0717905)) drop-shadow(0 5.99024px 5.32008px rgba(0, 0, 0, 0.0663313)) drop-shadow(0 3.32879px 2.21381px rgba(0, 0, 0, 0.051554))',
     },
     extend: {},
   },
   plugins: [],
-}
+};
