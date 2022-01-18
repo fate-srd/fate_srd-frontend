@@ -1,0 +1,33 @@
+.header {
+  @apply bg-blue-300;
+}
+
+.header__nav {
+  max-width: var(--max-width);
+}
+
+.header__branding {
+  @apply flex flex-row flex-nowrap items-center;
+  @apply relative;
+
+  max-width: var(--max-width);
+}
+
+.header__branding__menu-toggle {
+  @apply ml-auto;
+  @apply text-white;
+  @apply md:hidden;
+}
+
+.header__logo {
+  @apply block;
+  @apply w-1/2 md:w-1/4;
+
+  @media (min-width: 1024px) {
+    width: 18vw;
+  }
+}
+
+.header__nav {
+  @apply bg-blue-500 relative z-50;
+}

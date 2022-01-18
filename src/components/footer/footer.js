@@ -1,16 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Link from '../../utils/link';
 
 import logo from '../../images/logo.svg';
 import patreon from '../../images/become_a_patron_button@2x.png';
-
-const Link = ({ children, to, className }) => (
-  <a href={to} className={className}>
-    {children}
-  </a>
-);
 
 const fateTranslations = {
   'Fate SRD in Spanish': 'https://fate.1d12monos.com/',
@@ -175,12 +169,6 @@ const Footer = () => (
     </div>
   </footer>
 );
-
-Link.propTypes = {
-  children: PropTypes.node,
-  to: PropTypes.string,
-  className: PropTypes.string,
-};
 
 Footer.defaultProps = {
   siteTitle: ``,

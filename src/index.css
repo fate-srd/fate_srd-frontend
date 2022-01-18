@@ -8,3 +8,5 @@
 @import "./components/patreonBar/patreonBar.css";
 @import "./components/actual-play-card/actual-play-card.css";
 @import "./components/footer/footer.css";
+@import "./components/header/header.css";
+@import "./components/header/nav-primary.css";

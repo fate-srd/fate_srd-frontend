@@ -1,8 +1,8 @@
 import React from 'react';
-import { PatreonBar } from './patreonBar';
+import PatreonBar from './patreonBar';
 
 export default {
-  title: 'Component/Patreon Bar',
+  title: 'Component/Patreon',
 };
 
-export const Bar = () => <PatreonBar cssClasses="patreon-bar--show" />;
+export const Patreon = () => <PatreonBar cssClasses="patreon-bar--show" />;

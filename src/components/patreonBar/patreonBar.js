@@ -5,7 +5,7 @@ import { faTimes } from '@fortawesome/pro-solid-svg-icons';
 
 import patreonLogo from '../../images/patreon-bar-logo.png';
 
-export const PatreonBar = ({ cssClasses }) => {
+const PatreonBar = ({ cssClasses }) => {
   useEffect(() => {
     const patreonBarCookieName = 'Patreon Bar';
     const patreonBar = document.querySelector('.patreon-bar');
@@ -67,3 +67,5 @@ export const PatreonBar = ({ cssClasses }) => {
 PatreonBar.propTypes = {
   cssClasses: PropTypes.string,
 };
+
+export default PatreonBar;
