@@ -1,0 +1,80 @@
+.store-card {
+  @apply flex flex-col flex-nowrap;
+  @apply rounded shadow transition-all;
+  @apply bg-white text-base;
+  @apply hover:z-50;
+
+  box-shadow: 0 2.8px 2.2px 0 rgba(0, 0, 0, 0.06),
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.08), 0 12.5px 10px 0 rgba(0, 0, 0, 0.1),
+    0 22.3px 17.9px 0 rgba(0, 0, 0, 0.13), 0 41.8px 33.4px 0 rgba(0, 0, 0, 0.15),
+    0 100px 80px 0 rgba(0, 0, 0, 0.21);
+  transform: scale(1);
+}
+
+.store-card:hover {
+  transform: scale(1.025);
+}
+
+.store-card__image-content {
+  @apply text-center;
+
+  height: 300px;
+}
+
+.store-card__content {
+  @apply relative flex flex-col flex-nowrap;
+  @apply px-6 pb-6;
+}
+
+.store-card__image {
+  @apply transition-all mx-auto;
+
+  box-shadow: 0 2.8px 2.2px 0 rgba(0, 0, 0, 0.06),
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.08), 0 12.5px 10px 0 rgba(0, 0, 0, 0.1),
+    0 22.3px 17.9px 0 rgba(0, 0, 0, 0.13),
+    0 41.8px 33.4px 0 rgba(0, 0, 0, 0.15);
+  max-height: 300px;
+  transform: scale(1.05) rotate(1deg);
+}
+
+.store-card:hover .store-card__image {
+  transform: scale(1.15) rotate(1deg);
+}
+
+.store-card__button {
+  @apply block rounded-sm self-start w-max;
+  @apply px-4 py-2 mb-2;
+  @apply bg-blue-200 text-white;
+  @apply font-bold no-underline uppercase text-lg;
+  @apply transition-all;
+  @apply hover:bg-blue-300;
+}
+
+.gumroad-button {
+  @apply w-max;
+}
+
+.store-card__also-available {
+  @apply flex flex-row gap-4;
+}
+
+.store-card__also-available__link {
+  @apply block bg-contain;
+
+  width: 110px;
+  height: 25.3px;
+  text-indent: -5000px;
+}
+
+.store-card__also-available__link[href^="https://www.drivethrucards.com"],
+.store-card__also-available__link[href^="https://www.drivethrurpg.com"] {
+  @apply bg-contain;
+
+  background-image: url('./../../images/store/store-buy-dtr.png');
+}
+
+.store-card__also-available__link[href^="https://amazingrando.itch.io"] {
+  @apply bg-contain;
+  
+  background-image: url('./../../images/store/store-buy--itch.png');
+}
