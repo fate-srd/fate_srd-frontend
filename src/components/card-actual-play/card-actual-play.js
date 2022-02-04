@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const ActualPlayCard = ({ title, videoId, imageURL, publishedAt }) => (
+const ActualPlayCard = ({ title, videoId, imageURL, publishedAt }) => (
   <article key={title} className="actual-play-card">
     <a href={`https://www.youtube.com/watch?v=${videoId}`}>
       <img className="actual-play-card__img" src={imageURL} alt={title} />
@@ -27,3 +27,5 @@ ActualPlayCard.defaultProps = {
   imageURL: 'https://i.ytimg.com/vi/T-8UyqsGO84/maxresdefault.jpg',
   publishedAt: 'Aug 07, 2021',
 };
+
+export default ActualPlayCard;

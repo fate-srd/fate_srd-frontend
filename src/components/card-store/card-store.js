@@ -45,7 +45,7 @@ const products = {
   ],
 };
 
-const StoreCard = () => {
+const CardStore = () => {
   const {
     image,
     bkgImage,
@@ -114,4 +114,4 @@ Button.propTypes = {
   customClasses: PropTypes.string,
 };
 
-export default StoreCard;
+export default CardStore;

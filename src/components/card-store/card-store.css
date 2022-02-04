@@ -17,6 +17,7 @@
 
 .store-card__image-content {
   @apply text-center;
+  @apply rounded-t;
 
   height: 300px;
 }
@@ -77,4 +78,16 @@
   @apply bg-contain;
   
   background-image: url('./../../images/store/store-buy--itch.png');
+}
+
+.store-card-wrapper {
+  @apply grid gap-8;
+  
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .store-card-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -6,8 +6,8 @@
 
 @import "./components/tokens/fonts/font-fate.css";
 @import "./components/patreonBar/patreonBar.css";
-@import "./components/actual-play-card/actual-play-card.css";
+@import "./components/card-actual-play/card-actual-play.css";
 @import "./components/footer/footer.css";
 @import "./components/header/header.css";
 @import "./components/header/nav-primary.css";
-@import "./components/store-card/store-card.css";
+@import "./components/card-store/card-store.css";
