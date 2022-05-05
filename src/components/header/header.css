@@ -8,6 +8,7 @@
 
 .header__branding {
   @apply flex flex-row flex-nowrap items-center;
+  @apply mx-auto px-4 py-2 md:py-5 md:pt-8;
   @apply relative;
 
   max-width: var(--max-width);
@@ -17,11 +18,13 @@
   @apply ml-auto;
   @apply text-white;
   @apply md:hidden;
+
+  font-size: 2rem;
 }
 
 .header__logo {
   @apply block;
-  @apply w-1/2 md:w-1/4;
+  @apply w-2/3;
 
   @media (min-width: 1024px) {
     width: 18vw;
@@ -29,5 +32,5 @@
 }
 
 .header__nav {
-  @apply bg-blue-500 relative z-50;
+  @apply bg-blue-500 relative z-50 hidden;
 }

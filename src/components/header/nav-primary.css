@@ -12,7 +12,9 @@
 }
 
 @media (max-width: 1023px) {
-  .nav-primary {}
+  .nav-primary {
+    @apply hidden;
+  }
   
   .nav-primary.nav-primary--open {
     @apply bg-blue-700;

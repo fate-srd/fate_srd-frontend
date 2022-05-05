@@ -1,0 +1,27 @@
+:root {
+  --s: 1rem;
+  --s025: calc(var(--s) / 4);
+  --s05: calc(var(--s) / 2);
+  --s1: var(--s);
+  --s105: var(--s) * 1.5;
+  --s2: calc(var(--s) * 2);
+  --s3: calc(var(--s) * 3);
+  --s4: calc(var(--s) * 4);
+  --s5: calc(var(--s) * 5);
+  --max-width: 1279px;
+}
+
+@mixin max-width {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@mixin calloutBoxes {
+  margin: 0 calc(var(--s) * -1) var(--s);
+  padding: var(--s);
+
+  @include medium {
+    margin: 0 0 var(--s2);
+    padding: var(--s2);
+  }
+}

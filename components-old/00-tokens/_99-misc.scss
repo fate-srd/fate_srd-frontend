@@ -1,0 +1,41 @@
+.noscroll {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+@mixin buttonReset() {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin listResetUl() {
+  padding: 0;
+  margin: 0;
+}
+.reset-ul {
+  @include listResetUl();
+}
+
+@mixin listResetLi() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.full-reset-ul {
+  @include listResetUl();
+  @include listResetLi();
+}
+
+.codex-cover {
+  width: 35%;
+  float: right;
+  margin-left: var(--s);
+}

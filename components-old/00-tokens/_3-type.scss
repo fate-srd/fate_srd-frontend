@@ -1,0 +1,99 @@
+:root {
+  --font-color: var(--color-dark);
+  --font-size: clamp(0.9375rem, 1.6vw, 1.125rem);
+  --font-size-small: clamp(0.8375rem, 1.4vw, 1rem);
+  --line-height: 1.4;
+  --header-color: var(--color-blue-dark);
+  --header-line-height: 1;
+}
+
+body {
+  color: var(--font-color);
+  font-family: var(--font-base);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+p {
+  margin: 0 0 var(--s);
+}
+
+.small {
+  font-size: var(--font-size-small);
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: var(--header-color);
+    line-height: var(--header-line-height);
+    margin: calc(var(--s1) * 1.5) 0 var(--s);
+
+    @include breakpoint(1000px) {
+      margin: var(--s2) 0 var(--s);
+    }
+  }
+}
+
+h1,
+h2 {
+  font-size: clamp(1.5rem, 3.1vw, 2.375rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 2.1vw, 1.3rem);
+}
+
+.anchor {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-left: var(--s05);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  h3 & {
+    width: 18px;
+    height: 18px;
+  }
+
+  h4 & {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+ul,
+ol {
+  margin: 0 0 var(--s);
+  padding-left: 20px;
+
+  li {
+    margin-bottom: var(--s05);
+  }
+}
+
+blockquote {
+  @include calloutBoxes;
+
+  background: var(--color-gray-medium);
+  border-radius: var(--border-radius);
+  font-family: sketchnote-text, sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  font-size: --font-size;
+  color: #606060;
+  letter-spacing: 0.5px;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

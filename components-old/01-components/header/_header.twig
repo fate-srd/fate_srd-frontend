@@ -1,0 +1,130 @@
+<header class="site-header">
+  <div class="site-header__branding">
+    <img src={{logo}} alt="" class="site-header__logo">
+    <div class="site-header__branding__menu-toggle">
+      <i class="far fa-bars"></i>
+      <i class="far fa-times"></i>
+    </div>
+  </div>
+  <div class="site-header__nav">
+    <nav class="nav-primary">
+      <ul class="nav-primary__ul">
+        <li class="nav-primary__li has-nav-flyout nav-primary__sub">
+          <a class="nav-primary__link">
+            <i class="far fa-book nav-primary__link-icon"></i>
+            <span class="nav-primary__rules-wrapper" data-target="flyout-rules">
+              Rules
+              <i class="far fa-plus nav-primary__sub__mobile-toggle"></i>
+              <i class="far fa-minus nav-primary__sub__mobile-toggle"></i>
+            </span>
+          </a>
+          <div class="nav-flyout" id="flyout-rules">
+            <dl class="nav-flyout__region">
+              <dt>Core Rules</dt>
+              <dd>
+                <a href="#">Fate Core</a>
+              </dd>
+              <dd>
+                <a href="#">Fate Accelerated</a>
+              </dd>
+              <dd>
+                <a href="#">Fate Condensed</a>
+              </dd>
+            </dl>
+
+            <dl class="nav-flyout__region">
+              <dt>Toolkits</dt>
+              <dd>
+                <a href="#">Fate System Toolkit</a>
+              </dd>
+              <dd>
+                <a href="#">Fate Adversary Toolkit</a>
+              </dd>
+            </dl>
+
+            <dl class="nav-flyout__region">
+              <dt>Fate Books</dt>
+              <dd>
+                <a href="#">Atomic Robo</a>
+              </dd>
+              <dd>
+                <a href="#">Venture City</a>
+              </dd>
+              <dd>
+                <a href="#">War of Ashes</a>
+              </dd>
+            </dl>
+
+            <dl class="nav-flyout__region">
+              <dt>Worlds of Adventure</dt>
+              <dd>
+                <a href="#">Frontier Spirit</a>
+              </dd>
+              <dd>
+                <a href="#">Gods and Monsters</a>
+              </dd>
+              <dd>
+                <a href="#">Sails Full of Stars</a>
+              </dd>
+              <dd>
+                <a href="#">Three Rocketeers</a>
+              </dd>
+            </dl>
+
+            <dl class="nav-flyout__region">
+              <dt>Fate Codex</dt>
+              <dd>
+                <a href="#">Volume 1</a>
+              </dd>
+              <dd>
+                <a href="#">Volume 2</a>
+              </dd>
+              <dd>
+                <a href="#">Volume 3</a>
+              </dd>
+            </dl>
+
+            <dl class="nav-flyout__region">
+              <dt>Odds &amp; Ends</dt>
+              <dd>
+                <a href="#">Odds &amp; Ends</a>
+              </dd>
+            </dl>
+          </div>
+        </li>
+        <li class="nav-primary__li">
+          <a class="nav-primary__link" href="#">
+            <i class="far fa-treasure-chest nav-primary__link-icon"></i>
+            Games &amp; Products
+          </a>
+        </li>
+        <li class="nav-primary__li">
+          <a class="nav-primary__link" href="#">
+            <i class="far fa-head-side-headphones nav-primary__link-icon"></i>
+            Podcasts &amp; Videos
+          </a>
+        </li>
+        <li class="nav-primary__li">
+          <a class="nav-primary__link" href="#">
+            <i class="far fa-comments fa-swap-opacity nav-primary__link-icon"></i>
+            Community
+          </a>
+        </li>
+        <li class="nav-primary__li">
+          <a class="nav-primary__link" href="#">
+            <i class="far fa-folder-download nav-primary__link-icon"></i>
+            Downloads
+          </a>
+        </li>
+        <li class="nav-primary__li nav-primary__li--search">
+          <a class="nav-primary__link" href="#">
+            <i class="fas fa-search nav-primary__link-icon"></i>
+            Search
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  {% include "@components/patreon-bar/_patreon-bar.twig" %}
+</header>

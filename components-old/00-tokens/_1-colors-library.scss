@@ -1,0 +1,89 @@
+// These styles only affect the colors "Usage" page in the component library
+.cl-colors {
+  padding: 1rem;
+}
+
+.cl-colors__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.cl-colors__item {
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  min-height: 200px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cl-colors__title {
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-align: center;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.colors-color-white {
+  background: var(--color-white);
+}
+
+.colors-color-blue {
+  background: var(--color-blue);
+}
+
+.colors-color-blue-dark {
+  background: var(--color-blue-dark);
+}
+
+.colors-color-blue-darker {
+  background: var(--color-blue-darker);
+}
+
+.colors-color-blue-darkest {
+  background: var(--color-blue-darkest);
+}
+
+.colors-color-blue-darkestest {
+  background: var(--color-blue-darkestest);
+}
+
+.colors-color-blue-light {
+  background: var(--color-blue-light);
+}
+
+.colors-color-gray-dark {
+  background: var(--color-gray-dark);
+}
+
+.colors-color-gray-light {
+  background: var(--color-gray-light);
+}
+
+.colors-color-gray-medium {
+  background: var(--color-gray-medium);
+}
+
+.colors-color-yellow {
+  background: var(--color-yellow);
+}
+
+.colors-color-yellow-light {
+  background: var(--color-yellow-light);
+}
+
+.colors-color-yellow-dark {
+  background: var(--color-yellow-dark);
+}
+
+.colors-color-dark {
+  background: var(--color-dark);
+}
+
+.colors-color-patreon-orange {
+  background: var(--color-patreon-orange);
+}

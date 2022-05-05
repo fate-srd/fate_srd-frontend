@@ -1,0 +1,78 @@
+.announcement {
+  display: none;
+  background: var(--color-yellow);
+  padding: var(--s025) var(--s1); 
+
+  &--show {
+    display: block;
+  }
+
+  &__inner {
+    @include max-width;
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--s);
+    padding: var(--s05) var(--s);
+    position: relative;
+
+    @include large {
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__button {
+    display: inline-block;
+    background: var(--color-yellow-dark);
+    border-radius: var(--border-radius-small);
+    color: var(--color-white) !important;
+    text-decoration: none;
+    padding: var(--s025) var(--s);
+    margin-top: auto;
+    margin-left: var(--s);
+    align-self: flex-start;
+    font-size: 1rem;
+    transition: all 0.125s;
+    transform: translateY(0);
+
+    &:hover {
+      transform: translateY(1px);
+    }
+  }
+
+  &__close {
+    @include buttonReset;
+
+    color: var(--color-yellow-dark);
+    opacity: 1;
+    text-transform: uppercase;
+    transition: all 0.15s;
+    position: absolute;
+    top: var(--s05);
+    right: var(--s);
+    font-weight: bold;
+
+    @include large {
+      margin-left: auto;
+      position: static;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &__icon {
+      display: inline-block;
+      margin-left: var(--s025);
+    }
+  }
+
+  .bullhorn {
+    margin-right: var(--s);
+  }
+} 

@@ -1,0 +1,22 @@
+{% set colors_base_class = "cl-colors" %}
+
+<div {{ bem(colors_base_class) }}>
+  <h2>{{colors_heading}}</h2>
+
+  {% for palette in palettes %}
+    {% set palette_machine = palette.palette_heading|lower %}
+    <h3>{{palette.palette_heading ~ ' Theme'}}</h3>
+
+    <ul {{ bem('list', [palette_machine], colors_base_class) }} data-theme="{{ palette_machine }}">
+      {% for color in palette.colors %}
+        {% set color_machine = color.name|lower|replace({' ': '-'}) %}
+        {% if color.color_reverse == TRUE %}
+          {% set colors_title_modifiers = ['reverse'] %}
+        {% endif %}
+        <li {{ bem("item", [palette_machine ~ '-' ~ color_machine], colors_base_class) }}>
+          <span {{ bem("title", colors_title_modifiers, colors_base_class) }}>{{ color.name }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>

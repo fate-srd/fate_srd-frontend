@@ -3,7 +3,7 @@ import React from 'react';
 const GridTemplate = require('./grid').default;
 
 export default {
-  title: 'Component/Grid',
+  title: 'Layout/Grid',
 };
 
 export const Grid = (cssClasses) => (

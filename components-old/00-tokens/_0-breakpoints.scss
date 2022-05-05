@@ -1,0 +1,38 @@
+$break--footer-m: 600px;
+$break--footer-l: 1000px;
+
+@mixin beforeMedium {
+  @include breakpoint(max-width $break--footer-m - 1px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @include breakpoint($break--footer-m) {
+    @content;
+  }
+}
+
+@mixin beforeLarge {
+  @include breakpoint(max-width $break--footer-l - 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @include breakpoint($break--footer-l) {
+    @content;
+  }
+}
+
+@mixin navLarge {
+  @include breakpoint($break--footer-l + 100px) {
+    @content;
+  }
+}
+
+@mixin footerLarge {
+  @include breakpoint($break--footer-l) {
+    @content;
+  }
+}
