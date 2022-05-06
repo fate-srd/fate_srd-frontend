@@ -9,6 +9,11 @@
   left: 0;
   right: 0;
   z-index: 10000;
+  display: none;
+
+  &--show {
+    display: block;
+  }
 
   @include beforeMedium {
     background: transparent;
