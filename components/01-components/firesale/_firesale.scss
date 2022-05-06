@@ -1,0 +1,131 @@
+.firesale {
+  background: linear-gradient(
+    0deg,
+    rgba(67, 67, 67, 0.9) 50%,
+    rgba(67, 67, 67, 0) 100%
+  );
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+
+  @include beforeMedium {
+    background: transparent;
+
+    &::before {
+      content: '';
+      background: rgba(67, 67, 67, 0.9);
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 80;
+    }
+  }
+}
+
+.firesale-content {
+  position: absolute;
+  z-index: 100;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 10vw;
+
+  @include beforeMedium {
+    flex-flow: column nowrap;
+  }
+}
+
+.firesale-image {
+  max-width: 200px;
+  box-shadow: 0 2.8px 2.2px 0 rgba(0, 0, 0, 0.06),
+    0 6.7px 5.3px 0 rgba(0, 0, 0, 0.08), 0 12.5px 10px 0 rgba(0, 0, 0, 0.1),
+    0 22.3px 17.9px 0 rgba(0, 0, 0, 0.13), 0 41.8px 33.4px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(1.05) rotate(1deg);
+}
+
+.firesale-text {
+  position: relative;
+
+  h2,
+  h3 {
+    color: var(--color-white);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 7.1vw, 4.375rem);
+    margin-top: 0;
+    margin-bottom: var(--s05);
+  }
+
+  h3 {
+    font-size: clamp(1.6rem, 3.4vw, 2.5rem);
+    margin-top: 0;
+  }
+}
+
+.firesale-button {
+  display: block;
+  background: var(--color-blue);
+  border-radius: var(--border-radius-small);
+  color: var(--color-white) !important;
+  font-weight: 800;
+  text-decoration: none;
+  padding: var(--s05) var(--s);
+  align-self: flex-start;
+  text-transform: uppercase;
+  margin-bottom: var(--s05);
+  width: max-content;
+
+  &:hover {
+    background: var(--color-blue-dark);
+  }
+}
+
+.firesale-container {
+  position: relative;
+  z-index: 80;
+}
+
+.firesale-countdown {
+  background: var(--color-yellow);
+  border-radius: 100px;
+  padding: var(--s05) var(--s);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.firesale-close {
+  @include buttonReset;
+
+  background: var(--color-white);
+  opacity: 0.8;
+  text-transform: uppercase;
+  transition: all 0.15s;
+  font-weight: bold;
+  display: flex;
+  gap: var(--s05);
+  align-items: center;
+  border-radius: 100px;
+  padding: var(--s05) var(--s);
+  margin-left: auto;
+
+  @include beforeMedium {
+    position: fixed;
+    top: var(--s);
+    right: var(--s);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
