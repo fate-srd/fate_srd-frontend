@@ -32,5 +32,5 @@
 }
 
 .header__nav {
-  @apply bg-blue-500 relative z-50 hidden;
+  @apply bg-blue-500 relative z-50;
 }

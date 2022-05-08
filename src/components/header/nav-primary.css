@@ -1,5 +1,5 @@
 .nav-primary {
-  @apply hidden text-white;
+  @apply text-white;
 
   max-width: var(--max-width);
 }
@@ -20,7 +20,7 @@
     @apply bg-blue-700;
     @apply fixed inset-0 z-50;
     @apply flex pt-28;
-    @apply overflow-scroll;
+    @apply block overflow-scroll;
   }
 
   .nav-primary__ul {
