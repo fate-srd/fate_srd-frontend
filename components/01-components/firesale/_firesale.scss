@@ -61,7 +61,8 @@
   position: relative;
 
   h2,
-  h3 {
+  h3,
+  p {
     color: var(--color-white);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
@@ -105,6 +106,7 @@
   background: var(--color-yellow);
   border-radius: 100px;
   padding: var(--s05) var(--s);
+  margin-bottom: var(--s);
   font-weight: bold;
   display: inline-block;
 }
