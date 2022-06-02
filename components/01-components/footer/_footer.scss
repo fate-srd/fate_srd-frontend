@@ -85,8 +85,11 @@
     color: var(--color-white);
     font-weight: 700;
     text-decoration: none;
-    transition: all 0.15s;
     padding: var(--s05) var(--s05) var(--s05) 0;
+
+    @media (prefers-reduced-motion) {
+      transition: all 0.15s;
+    }
 
     &:hover {
       color: var(--color-yellow-light);
@@ -101,7 +104,10 @@
     a {
       color: var(--color-yellow-light);
       text-decoration: none;
-      transition: all 0.15s;
+
+      @media (prefers-reduced-motion) {
+        transition: all 0.15s;
+      }
 
       &:hover {
         text-decoration: underline;

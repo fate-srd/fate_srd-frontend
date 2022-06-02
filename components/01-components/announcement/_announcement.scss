@@ -1,7 +1,7 @@
 .announcement {
   display: none;
   background: var(--color-yellow);
-  padding: var(--s025) var(--s1); 
+  padding: var(--s025) var(--s1);
 
   &--show {
     display: block;
@@ -37,11 +37,14 @@
     margin-left: var(--s);
     align-self: flex-start;
     font-size: 1rem;
-    transition: all 0.125s;
-    transform: translateY(0);
 
-    &:hover {
-      transform: translateY(1px);
+    @media (prefers-reduced-motion) {
+      transition: all 0.125s;
+      transform: translateY(0);
+
+      &:hover {
+        transform: translateY(1px);
+      }
     }
   }
 
@@ -51,11 +54,14 @@
     color: var(--color-yellow-dark);
     opacity: 1;
     text-transform: uppercase;
-    transition: all 0.15s;
     position: absolute;
     top: var(--s05);
     right: var(--s);
     font-weight: bold;
+
+    @media (prefers-reduced-motion) {
+      transition: all 0.15s;
+    }
 
     @include large {
       margin-left: auto;
@@ -75,4 +81,4 @@
   .bullhorn {
     margin-right: var(--s);
   }
-} 
+}

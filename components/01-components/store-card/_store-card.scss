@@ -17,15 +17,18 @@
     0 22.3px 17.9px 0 rgba(0, 0, 0, 0.13), 0 41.8px 33.4px 0 rgba(0, 0, 0, 0.15),
     0 100px 80px 0 rgba(0, 0, 0, 0.21);
   background-color: #fff;
-  transform: scale(1);
-  transition: all 0.15s;
 
-  &:hover {
-    transform: scale(1.025);
-    z-index: 100;
+  @media (prefers-reduced-motion) {
+    transform: scale(1);
+    transition: all 0.15s;
 
-    .store-card__image {
-      transform: scale(1.15) rotate(1deg);
+    &:hover {
+      transform: scale(1.025);
+      z-index: 100;
+
+      .store-card__image {
+        transform: scale(1.15) rotate(1deg);
+      }
     }
   }
 
@@ -47,8 +50,11 @@
       0 22.3px 17.9px 0 rgba(0, 0, 0, 0.13),
       0 41.8px 33.4px 0 rgba(0, 0, 0, 0.15);
     max-height: 300px;
-    transition: all 0.15s;
-    transform: scale(1.05) rotate(1deg);
+
+    @media (prefers-reduced-motion) {
+      transition: all 0.15s;
+      transform: scale(1.05) rotate(1deg);
+    }
   }
 
   &__button {
