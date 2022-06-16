@@ -86,9 +86,10 @@
     font-weight: 700;
     text-decoration: none;
     padding: var(--s05) var(--s05) var(--s05) 0;
+    transition: all 0.15s;
 
     @media (prefers-reduced-motion) {
-      transition: all 0.15s;
+      transition: none;
     }
 
     &:hover {
@@ -104,9 +105,10 @@
     a {
       color: var(--color-yellow-light);
       text-decoration: none;
+      transition: all 0.15s;
 
       @media (prefers-reduced-motion) {
-        transition: all 0.15s;
+        transition: none;
       }
 
       &:hover {

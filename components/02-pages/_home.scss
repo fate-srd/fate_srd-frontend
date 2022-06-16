@@ -98,6 +98,13 @@
       transform: scale(1.02);
     }
 
+    @media (prefers-reduced-motion) {
+      &:hover .core-rules-list__item__content {
+        transform: none;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -125,9 +132,10 @@
     transform: scale(1);
     width: 100%;
     height: 100%;
+    transition: all 0.15s;
 
     @media (prefers-reduced-motion) {
-      transition: all 0.15s;
+      transition: none;
     }
 
     h3 {

@@ -42,9 +42,10 @@
   padding: 5px 20px;
   text-decoration: none;
   text-align: center;
+  transition: all 0.15s;
 
   @media (prefers-reduced-motion) {
-    transition: all 0.15s;
+    transition: none;
   }
 
   &:hover {
@@ -60,9 +61,10 @@
   position: absolute;
   top: var(--s05);
   right: var(--s);
+  transition: all 0.15s;
 
   @media (prefers-reduced-motion) {
-    transition: all 0.15s;
+    transition: none;
   }
 
   @include large {

@@ -81,9 +81,10 @@
   a,
   a:link {
     color: var(--color-blue);
+    transition: all 0.15s;
 
     @media (prefers-reduced-motion) {
-      transition: all 0.15s;
+      transition: none;
     }
 
     &:hover {

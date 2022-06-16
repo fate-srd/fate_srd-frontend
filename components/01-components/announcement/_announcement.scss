@@ -37,13 +37,18 @@
     margin-left: var(--s);
     align-self: flex-start;
     font-size: 1rem;
+    transition: all 0.125s;
+    transform: translateY(0);
+
+    &:hover {
+      transform: translateY(1px);
+    }
 
     @media (prefers-reduced-motion) {
-      transition: all 0.125s;
-      transform: translateY(0);
+      transition: none;
 
       &:hover {
-        transform: translateY(1px);
+        transform: none;
       }
     }
   }
@@ -58,9 +63,10 @@
     top: var(--s05);
     right: var(--s);
     font-weight: bold;
+    transition: all 0.15s;
 
     @media (prefers-reduced-motion) {
-      transition: all 0.15s;
+      transition: none;
     }
 
     @include large {
